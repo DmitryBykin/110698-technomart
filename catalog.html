@@ -62,8 +62,8 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div> <!-- end contacts-block -->
                 
-        <div class="top-user-block">
-          <img class="user-picture" src="user-picture.jpg" width=20 height=20 alt="user">   <!-- опять же возможно картинка через background-image ? -->
+        <div class="top-user-block">                        <!-- опять же возможно картинка через background-image ? -->
+          <img class="user-picture" src="user-picture.jpg" width="20" height="20" alt="user">   
           <div class="user-name">
             <p> Равшан Джамшутович</p>
           </div>
@@ -87,27 +87,27 @@
                 
       </div> <!-- end top-block -->
             
-      <nav class="nav-block">
-        <ul class="nav-list">
-          <li class="nav-item"> 
+      <nav class="top-nav-block">
+        <ul class="top-nav-list">
+          <li class="top-nav-item"> 
             <a href="/">Главная</a> 
           </li>
-          <li class="nav-item"> 
+          <li class="top-nav-item"> 
             <a href="/">Компания</a>
           </li>
-          <li class="nav-item">
+          <li class="top-nav-item">
             <a href="/">Каталог</a>
           </li>
-          <li class="nav-item">
+          <li class="top-nav-item">
             <a href="/">Новости</a>
           </li>
-          <li class="nav-item">
+          <li class="top-nav-item">
             <a href="/">Спецпредложения</a>
           </li>
-          <li class="nav-item">
+          <li class="top-nav-item">
             <a href="/">Доставка</a>
           </li>
-          <li class="nav-item">
+          <li class="top-nav-item">
             <a href="/">Контакты</a> 
           </li>
         </ul>
@@ -118,19 +118,19 @@
   
   
   <main class="catalog-content">      <!-- Основной блок (все, что на белом фоне) -->
-    <div class="container">
+    <div class="container">           
   
       <div class="breadcrumbs">
           <img class="home" src="home.jpg" width="20" height="20" alt="home">
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
-              Каталог
+              <a href="#">Каталог</a>
             </li>
             <li class="breadcrumbs-item">
-              Инструмент
+              <a href="#">Инструмент</a>
             </li>
             <li class="breadcrumbs-item">
-              Перфораторы
+              <a href="#">Перфораторы</a>
             </li>
           </ul>        
       </div> <!-- end breadcrumbs -->
@@ -139,8 +139,8 @@
         <h2 class="catalog-title">Перфораторы</h2>
       </div>
       
-      <section class="filter-block">       <!-- Левый блок с фильтрами -->
-        
+      <section class="filter-block">       <!-- Левый блок с фильтрами -->      
+       
         <div class="filter-block-name">
           <h2>Фильтр</h2>
         </div>
@@ -148,12 +148,13 @@
         <div class="filter-title">        
           <h2>Цена</h2>
         </div>
-        
+
+        <form class="searching-form" action="/search" method="post">            <!-- начало формы с фильтрами -->
+            
         <div class="filter-price-change">  <!-- эту штуку вообще пока не знаю как сделать -->
         
-        </div>
-         
-        <form class="searching-form" action="/search" method="post">
+        </div>         
+        
         <div class="searching-by-manufacturer">
           <h2>Производители:</h2>          
           <ul>
@@ -181,7 +182,7 @@
         </div> <!-- end searching-by-manufacturer -->
         
         <div class="searching-by-power">
-          <h2> Питание: </h2>
+          <h2>Питание:</h2>
           <ul>
             <li>
               <input type="radio" name="power" id="accumulator" value="accumulator" checked> 
@@ -193,41 +194,41 @@
             </li>               
           </ul>
           <button class="btn-search" type="submit">Показать</button>                                
-        </div> <!-- end searching-by-power -->
-        </form>
+        </div>  <!-- end searching-by-power -->
+        </form> <!-- конец формы с фильтрами -->
         
       </section> <!-- end filter-block -->
       
       
-      <section class="main-items-block">      <!-- Блок с блоком поиска, блоком перфораторов и блоком кнопок для страниц -->
+      <section class="main-items-block">      <!-- Блок с блоком сортировки, блоком перфораторов и блоком кнопок для страниц -->
         
           <div class="sorting">               <!-- Блок сортировки -->
 
-            <div class="sorting-title">
+            <div class="sorting-title">       <!-- название -->
               <h2>Сортировка</h2>
             </div>
 
-            <div class="sorting-by-block">
-              <ul class="list-sorting-by">
-                <li class="item-sorting-by">
+            <div class="sorting-block">       <!-- Блок с типами сортировки -->
+              <ul class="sorting-list">
+                <li class="sorting-item sorting-item-active">
                   <p>По цене</p>
                 </li>
-                <li class="item-sorting-by">
+                <li class="sorting-item">
                   <p>По типу</p>
                 </li>
-                <li class="item-sorting-by">
+                <li class="sorting-item">
                   <p>По функционалу</p>
                 </li>
               </ul>
             </div>
 
-            <div class="sorting-buttons-block">
+            <div class="sorting-buttons-block">     <!-- Блок с треугольными кнопками -->
               <button class="btn-up"></button>
               <button class="btn-down"></button>            
             </div>
           </div> <!-- end sorting -->
         
-        <div class="items-block">                <!-- Блок с перфораторами -->
+        <div class="items-block">                   <!-- Блок с перфораторами -->
           <article class="products-item">            
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
@@ -250,13 +251,15 @@
             </div>                          
           </article>
 
-            <article class="products-item products-item-new products-item-hover">            
-              <div class="item-btn-block">
-                <button class="btn-buy">Купить</button>
+                                                                <!-- новый товар (в углу надпись NEW) -->
+                                                                <!-- при наведении курсора появляются кнопки "Купить" и "В закладки" -->
+            <article class="products-item products-item-new without-old-price">            
+              <div class="item-btn-block">                                      
+                <button class="btn-buy">Купить</button>                <!-- кнопки появляются при наведении -->         
                 <button class="btn-to-bookmarks">В закладки</button>
               </div>
-              <h2 class="item-title">Перфоратор BOSH BFG2000</h2>              
-              <div class="price-block">
+              <h2 class="item-title">Перфоратор BOSH BFG2000</h2>                                  
+                <div class="price-block">                               <!-- отсутствует раздел со старой ценой -->
                 <p class="price">12500 р.</p> 
               </div>                          
             </article> 
@@ -272,7 +275,7 @@
               </div>                          
             </article> 
 
-            <article class="products-item">            
+            <article class="products-item products-item-new">            <!-- новый товар в углу надпись NEW -->
               <figure>
                 <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
               </figure>
@@ -283,12 +286,12 @@
               </div>                          
             </article> 
 
-            <article class="products-item without-old-price">            
+            <article class="products-item without-old-price">             <!-- товар не новый, но без старой цены -->
               <figure>
                 <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
               </figure>
               <h2 class="item-title">Перфоратор BOSH BFG 2000</h2>                        
-              <!--<p class="old-price">30500 р.</p> -->
+              <!--<p class="old-price">30500 р.</p> -->                   <!-- отсутствует раздел со старой ценой -->  
               <div class="price-block">
                 <p class="price">12500 р.</p> 
               </div>                          
@@ -316,12 +319,12 @@
               </div>                          
             </article> 
 
-            <article class="products-item without-old-price">            
+            <article class="products-item without-old-price">                   <!-- товар не новый, но без старой цены -->
               <figure>
                 <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
               </figure>
               <h2 class="item-title">Перфоратор BOSH BFG 2000</h2>                        
-              <!--<p class="old-price">30500 р.</p> -->
+              <!--<p class="old-price">30500 р.</p> -->                         <!-- отсутствует раздел со старой ценой -->
               <div class="price-block">
                 <p class="price">12500 р.</p> 
               </div>                          
@@ -364,7 +367,7 @@
     <div class="container">
       
       <div class="bottom-logo">
-        <a href="/">
+        <a href="index.html">
           <p>ТЕХНОМАРТ</p> 
         </a>
       </div>

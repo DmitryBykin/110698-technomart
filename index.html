@@ -17,7 +17,7 @@
             
       <div class="searching-block">
         <form class="searching-form" action="/search" method="post">          
-          <button class="btn-search" type="submit"></button>           <!-- как сделать из кнопки изображение для формы? -->
+          <button class="btn-search" type="submit"></button>           <!-- как сделать в форме кнопку с изображением лупы? -->
           <!-- <label for="search">Поиск:</label> -->
           <input type="text" id="search" size="10" value="Поиск:">            
         </form>
@@ -102,36 +102,36 @@
     <div class="container">
       <div class="products-and-features">  <!-- группы товаров, скидки, доставка, слайдер -->
 
-        <article class="materials">        <!-- картинки добавляются с помощью background-image ? -->
-          <h2>Материалы</h2>               <!-- присвоены разные классы для article -->
-          <a class="btn" href="#">На любой вкус</a>
+        <article class="products products-materials">               <!-- картинки лучше добавлять с помощью background-image ? -->
+          <h2>Материалы</h2>                                        <!-- или вставить в каждый article с помощью img ?-->
+          <a class="btn btn-materials" href="#">На любой вкус</a>
         </article> 
 
-        <article class="tools">
+        <article class="products products-tools">
           <h2>Инструмент</h2>  
-          <a class="btn" href="#">На все случаи</a>
+          <a class="btn btn-tools" href="#">На все случаи</a>
         </article> 
               
-        <article class="technics">
+        <article class="products products-technics">
           <h2>Техника</h2>  
-          <a class="btn" href="#">Для стройки</a>
+          <a class="btn btn-technics" href="#">Для стройки</a>
         </article> 
         
-        <div class="slider">
+        <div class="products-slider">
           <img src="slider.jpg" width="200" height="100" alt="slider">   <!-- пока не знаю как слайдеры делаются -->
-          <button class="btn-prev"></button>
-          <button class="btn-next"></button>              
+          <button class="btn-slider-prev"></button>
+          <button class="btn-slider-next"></button>              
           <a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          
         </div> 
         
-        <article class="discounts">
+        <article class="products products-discounts">
           <h2>Скидки 50%</h2>  
-          <a class="btn" href="#">На 350 товаров</a>
+          <a class="btn btn-discount" href="#">На 350 товаров</a>
         </article> 
         
-        <article class="delivery">
+        <article class="products products-delivery">
           <h2>Доставка</h2>  
-          <a class="btn" href="#">Бесплатно</a>
+          <a class="btn btn-delivery" href="#">Бесплатно</a>
         </article> 
         
       </div> <!-- end products-and-features -->
@@ -143,7 +143,7 @@
             <h2>Популярные товары:</h2>
           </div>
           <div class="all-products-btn">
-            <a class="btn" href="popular-products.html">Все популярные товары</a>
+            <a class="btn-popular-products" href="popular-products.html">Все популярные товары</a>
           </div>
         </div>
         
@@ -155,8 +155,8 @@
             </figure>
             <h2 class="item-title">Перфоратор BOSH BFG9000</h2>
             <p class="old-price">32500 р.</p>            
-            <div class="price-block">
-              <p class="price">25500 р.</p> 
+            <div class="price-block">          <!-- везде добавлен div т.к. смутило как потом сделать этот хитрый шильдик на красном фоне :) -->
+              <p class="price">25500 р.</p>     
             </div>                          
           </article>
 
@@ -166,7 +166,7 @@
             </figure>
             <h2 class="item-title">Перфоратор BOSH BFG3000</h2>
             <p class="old-price">22500 р.</p>            
-            <div class="price-block">    <!-- везде добавлен div т.к. смутило как потом сделать эту хитрую кнопку на красном фоне :) --> 
+            <div class="price-block">     
               <p class="price">15500 р.</p> 
             </div>                          
           </article>
@@ -368,7 +368,7 @@
           Вы можете забрать товар сами, заехав в наш офис:          
         </p>
         <figure>
-          <a href="#">              <!-- по спецификации переход к сервису карт -->
+          <a href="#">                                            <!-- по спецификации переход к сервису карт -->
             <img src="map.jpg" width="100" height="100" alt="Схема проезда">
           </a>
         </figure>
