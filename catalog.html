@@ -151,8 +151,16 @@
 
         <form class="searching-form" action="/search" method="post">            <!-- начало формы с фильтрами -->
             
-        <div class="filter-price-change">  <!-- эту штуку вообще пока не знаю как сделать -->
-        
+        <div class="price-range-filter">  																			<!-- взято из учебных примеров -->
+        	<div class="price-range-controls">
+						<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+						<div class="toggle min-toggle"></div>
+						<div class="toggle max-toggle"></div>
+					</div>            
+					<div class="price-controls">
+							<input class="min-price" type="text" value="0">
+							-<input class="max-price" type="text" value="30000">							
+					</div>
         </div>         
         
         <div class="searching-by-manufacturer">
