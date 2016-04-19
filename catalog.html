@@ -6,6 +6,7 @@
 </head>
     
 <body>
+<!-- Все что касается хэдера тут тоже надо применить -->
   <header class="header-catalog">
     <div class="container">
             
@@ -63,14 +64,20 @@
         </div> <!-- end contacts-block -->
                 
         <div class="top-user-block">                        <!-- опять же возможно картинка через background-image ? -->
+        <!-- Верно! -->
           <img class="user-picture" src="user-picture.jpg" width="20" height="20" alt="user">   
+          <!-- Блок и p не нужны, Равшан будет ссылкой -->
           <div class="user-name">
             <p> Равшан Джамшутович</p>
           </div>
+
+          <!-- Logout тоже будет ссылкой, которой мы фоном сделаем картинку. Button можно убрать.            
+           -->
           <button class="btn-logout">
             <img class="logout-picture" src="logout-picture.jpg" width="20" height="20" alt="logout">
           </button>          
           
+          <!-- .orders-personal-block лишний, ul здесь прекрасно выполнит роль блока -->
           <div class="orders-personal-block">
             <ul class="orders-personal-list">
               <li class="orders-personal-item">
@@ -121,6 +128,10 @@
     <div class="container">           
   
       <div class="breadcrumbs">
+          <!-- 
+            Картинка Домой тоже должна входить в ul первым элементом списка
+            и быть ссылкой. Мы сделаем её с помощью bg-img, img надо убрать
+           -->
           <img class="home" src="home.jpg" width="20" height="20" alt="home">
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
@@ -130,6 +141,7 @@
               <a href="#">Инструмент</a>
             </li>
             <li class="breadcrumbs-item">
+              <!-- В хлебных крошках последний элемент, страница, на которой мы сейчас находимся не должна быть ссылкой. Просто правило хорошего тона для SEO-продвижения. -->
               <a href="#">Перфораторы</a>
             </li>
           </ul>        
@@ -152,14 +164,14 @@
         <form class="searching-form" action="/search" method="post">            <!-- начало формы с фильтрами -->
             
         <div class="price-range-filter">  																			<!-- взято из учебных примеров -->
-        	<div class="price-range-controls">
-						<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
-						<div class="toggle min-toggle"></div>
-						<div class="toggle max-toggle"></div>
-					</div>            
-					<div class="price-controls">
-							<input class="min-price" type="text" value="0">
-							-<input class="max-price" type="text" value="30000">							
+          	<div class="price-range-controls">
+  						<div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+  						<div class="toggle min-toggle"></div>
+  						<div class="toggle max-toggle"></div>
+  					</div>            
+  					<div class="price-controls">
+  							<input class="min-price" type="text" value="0">
+  							-<input class="max-price" type="text" value="30000">							
 					</div>
         </div>         
         
@@ -219,6 +231,9 @@
             <div class="sorting-block">       <!-- Блок с типами сортировки -->
               <ul class="sorting-list">
                 <li class="sorting-item sorting-item-active">
+                  <!-- Вместо p надо добавить ссылки,
+                  в будущем пользователь будет кликать по ним, чтобы
+                  переключаться -->
                   <p>По цене</p>
                 </li>
                 <li class="sorting-item">
@@ -248,7 +263,8 @@
               </div>                          
           </article>
 
-          <article class="products-item">            
+          <article class="products-item">
+            <!-- Здесь надо учесть все что я сказал про блоки товаров в index.html -->
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
@@ -262,7 +278,8 @@
                                                                 <!-- новый товар (в углу надпись NEW) -->
                                                                 <!-- при наведении курсора появляются кнопки "Купить" и "В закладки" -->
             <article class="products-item products-item-new without-old-price">            
-              <div class="item-btn-block">                                      
+              <div class="item-btn-block"> 
+                <!-- Здесь лучше вместо button использовать a, будет проще при стилизации -->
                 <button class="btn-buy">Купить</button>                <!-- кнопки появляются при наведении -->         
                 <button class="btn-to-bookmarks">В закладки</button>
               </div>
@@ -284,6 +301,7 @@
             </article> 
 
             <article class="products-item products-item-new">            <!-- новый товар в углу надпись NEW -->
+              <!-- Можно сделать как ты, в виде дополнительно класса к article, но я бы сделал в виде отдельного блока, чтобы в будущем облегчить работу программисту или самому себе, когда появление этого блока надо будет ставить под условие. Тут как сам решишь, оба варианты приемлимы -->
               <figure>
                 <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
               </figure>
@@ -339,10 +357,12 @@
             </article> 
           </div> <!-- end items-block -->
       
-               
+           
+          <!-- Не обязательно оборачивать в блок ul, здесь он может быть сам по себе -->
           <div class="btn-pages">                             <!-- Блок с кнопками для страниц -->
             <ul class="pagination-list">
               <li class="paginator-item"> 
+                <!-- Как и в хлебных крошках, текущей странице лучше не быть ссылкой, тоже для SEO. Это необязательно делать, просто даю тебе рекомендации для красоты кода и исполнения  -->
                 <a class="pagitanation-link paginator-link-active" href="#">1</a> 
               </li>
               <li class="paginator-item"> 
@@ -371,6 +391,7 @@
     </p>
   </section>
   
+  <!-- Здесь все что касается футера из index.html должно быть учтено -->
   <div class="bottom-content">
     <div class="container">
       

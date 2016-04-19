@@ -11,21 +11,29 @@
             
       <div class="top-logo">
         <a href="/">
-          <p>ТЕХНОМАРТ</p> 
+          <!-- Здесь не нужен абзац и капс -->					
+          Техномарт     <!-- абзац и капс убрал -->
         </a>
       </div>
             
       <div class="searching-block">
         <form class="searching-form" action="/search" method="post">          
           <button class="btn-search" type="submit"></button>           <!-- как сделать в форме кнопку с изображением лупы? -->
-          <!-- <label for="search">Поиск:</label> -->
+          <!-- Мы сделаем её с помощью блока с каким-нибудь классом, который
+          потом будет стилизовать -->
           <input type="text" id="search" size="10" value="Поиск:">            
         </form>
       </div> <!-- end searching-block -->
             
       <div class="bookmarks-block">
-        <a href="bookmarks.html">                    
-          <img src="img/icon-bookmarks.jpg" width="10" height="10" alt="Bookmarks">
+        <a href="bookmarks.html">
+          <!-- В верстке есть такой подход насчет отображения изображений:
+          Если требуется разместить какое-то изображение, которое несет смысловую/контентную нагрузку, например, фотографию, аватарку, карту, нужно использовать тэг img. Напротив, если это изображение используется для оформления или декорирования (кнопки, фон, всякие стрелки, кнопки социальных сетей), его мы добавляем в качестве фона. Поэтому вот эту и другие иконки ниже мы добавим с помощью стилей, здесь она не нужна.
+          Если не совсем понятно, обрати на это внимание, будем разбираться. Это важно понять.
+           -->
+          
+					<!-- img убрал -->
+					
         </a>
         <p>Закладки: 0</p>
       </div> 
@@ -58,7 +66,11 @@
         </div>
                 
         <div class="top-contacts-block">
-          <p class="top-phone">+7 (812) 555-05-55</p>
+          <!-- Здесь лучше использовать div, вместо p. 
+          Проще будет стилизовать. P создает отсутупы сверху и снизу, тебе придется их обнулять, поэтому проще сразу div
+           -->
+					<!-- убрал p сделал div -->
+          <div class="top-phone">+7 (812) 555-05-55</div>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div> <!-- end contacts-block -->
                 
@@ -104,6 +116,9 @@
 
         <article class="products products-materials">               <!-- картинки лучше добавлять с помощью background-image ? -->
           <h2>Материалы</h2>                                        <!-- или вставить в каждый article с помощью img ?-->
+          
+          <!-- С помощью bg-image -->
+
           <a class="btn btn-materials" href="#">На любой вкус</a>
         </article> 
 
@@ -117,12 +132,51 @@
           <a class="btn btn-technics" href="#">Для стройки</a>
         </article> 
         
-        <div class="products-slider">
-          <img src="slider.jpg" width="200" height="100" alt="slider">   <!-- пока не знаю как слайдеры делаются -->
-          <button class="btn-slider-prev"></button>
-          <button class="btn-slider-next"></button>              
-          <a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          
-        </div> 
+        <div class="products-slider-block">          
+					<!-- У тебя есть блок .products-slider-block
+            Затем в него добавляем столько вложенных блоков, сколько у нас слайдов
+            Внутри каждого из них должны быть:
+            - Блок с описанием (Перфораторы. Настоящие мужские игрушки, например)
+            - Изображение с помощью img
+            - Ссылка "Открыть каталог"
+
+            После блоков со слайдами отдельными блоками идут блоки со
+            стрелками "< - >" и блок с навигацией в виде точек (сделать с помощью списков ul li с ссылками a) 
+				-->
+					<!-- начало добавлений -->
+					<div class="products-slider">
+						<div class="slider-description">
+							Описание
+					 	</div>
+						<img src="slider-1.jpg" width="200" height="100" alt="slider">
+						<a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
+					</div>
+					
+					<div class="products-slider">
+						<div class="slider-description">
+							Описание
+					 	</div>
+						<img src="slider-2.jpg" width="200" height="100" alt="slider">
+						<a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
+					</div>
+					
+					<div class="btn-slider-block">
+						<button class="btn-slider-prev"></button>
+						<button class="btn-slider-next"></button>
+					</div>
+          
+					<div class="nav-slider-block">
+						<ul class="nav-slider-list">
+							<li class="nav-slider-item">
+								<a href="#"></a>
+							</li>
+							<li class="nav-slider-item">
+								<a href="#"></a>
+							</li>
+						</ul>
+					</div>                        
+          <!-- конец добавлений -->
+        </div> <!-- end products-slider-block -->
         
         <article class="products products-discounts">
           <h2>Скидки 50%</h2>  
@@ -139,12 +193,12 @@
       <section class="popular-products">
         
         <div class="products-title-block">
-          <div class="products-title">
-            <h2>Популярные товары:</h2>
-          </div>
-          <div class="all-products-btn">
+          <!-- Блоки .products-title и .all-products-btn лишние,
+          можно разместить h2 и a без них
+          -->
+						<!-- Изменил, убрал лишние блоки -->
+            <h2 class="products-title">Популярные товары:</h2>        
             <a class="btn-popular-products" href="popular-products.html">Все популярные товары</a>
-          </div>
         </div>
         
         <div class="popular-products-items">
@@ -153,21 +207,44 @@
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
-            <h2 class="item-title">Перфоратор BOSH BFG9000</h2>
-            <p class="old-price">32500 р.</p>            
+            <!-- h2 не нужен, завернуть в обычный блок и название товара
+            должно быть ссылкой, которая в будушем будет вести нас в карточку товара (думаем на перед, чтобы потом не переделывать :) )-->
+						<!-- h2 везде убрал, добавил <a> --> 
+            <div class="item-title">
+							<a href="#">Перфоратор BOSH BFG9000</a>
+						</div>
+
+            <div class="old-price">32500 р.</div>            
             <div class="price-block">          <!-- везде добавлен div т.к. смутило как потом сделать этот хитрый шильдик на красном фоне :) -->
-              <p class="price">25500 р.</p>     
-            </div>                          
+            <!-- Все правильно, только размести обе цены в отдельные блоки и без p -->
+							<!-- разместил цены в div или речь про то, что обе цены завернуть в еще один внешний блок div вот так:  -->
+								<!-- 
+										<div class="old-new-prices-block">
+											<div class="old-price">22500 р.</div>            
+												<div class="price-block">     
+													<div class="price">15500 р.</div> 
+											</div>                          
+										</div>
+								? -->
+							
+              <div class="price">25500 р.</div>     
+            </div> 
+            <!-- Ты забыл разместить всплывающий блок со ссылками Купить и В корзину и блок который говорит нам, что товар NEW. Их можно разместить после всех элементов article, в конце. -->
+						
+						<!-- добавил последний article с всплывающими кнопками Купить и В корзину --> 
+						<!-- в предпоследнем article добавлен .products-item-new. Этот класс сможет добавить  надпись NEW с помощью CSS? -->
           </article>
 
           <article class="products-item">            
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
-            <h2 class="item-title">Перфоратор BOSH BFG3000</h2>
-            <p class="old-price">22500 р.</p>            
+            <div class="item-title">
+							<a href="#">Перфоратор BOSH BFG3000</a>
+						</div>
+            <div class="old-price">22500 р.</div>            
             <div class="price-block">     
-              <p class="price">15500 р.</p> 
+              <div class="price">15500 р.</div> 
             </div>                          
           </article>
           
@@ -175,10 +252,12 @@
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
-            <h2 class="item-title">Перфоратор BOSH BFG6000</h2>
-            <p class="old-price">30500 р.</p>            
+            <div class="item-title">
+							<a href="#">Перфоратор BOSH BFG6000</a>
+						</div>
+            <div class="old-price">30500 р.</div>            
             <div class="price-block">
-              <p class="price">25500 р.</p> 
+              <div class="price">25500 р.</div> 
             </div>                          
           </article> 
           
@@ -186,11 +265,34 @@
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
-            <h2 class="item-title">Перфоратор BOSH BFG2000</h2>                        
+            <div class="item-title">
+							<a href="#">Перфоратор BOSH BFG2000</a>
+						</div>                        
             <div class="price-block">
-              <p class="price">25500 р.</p> 
+              <div class="price">25500 р.</div> 
             </div>                          
           </article> 
+					
+					<!-- посмотрел еще раз на картинки товаров: 
+					Получается, что есть 
+					- новые товары (с надписью NEW в углу и без старой цены) = .products-item-new
+					- не новые товары (без надписи NEW) в углу и без старой цены = .without-old-price
+					- не новые товары с перечеркнутой старой ценой = products-item															
+					-->
+					<article class="products-item products-item-new without-old-price">            
+              <div class="item-btn-block"> 
+                <!-- Здесь лучше вместо button использовать a, будет проще при стилизации -->
+								<!-- исправлено на <a> -->
+                <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+                <a href="#" class="btn-to-bookmarks">В закладки</a>
+              </div>
+              <div class="item-title">
+								<a href="#">Перфоратор BOSH BFG2000</a>
+							</div>                                  
+              <div class="price-block">                               <!-- отсутствует раздел со старой ценой -->
+              	<div class="price">12500 р.</div> 
+              </div>                          
+            </article> 
         </div> <!-- end popular-product-items -->
         
       </section> <!-- end popular-products -->
@@ -198,78 +300,64 @@
       <section class="popular-manufacturers">
         
         <div class="manufacturers-title-block">
-          <div class="manufacturers-title">
-            <h2>Популярные производители:</h2>
-          </div>
-          <div class="all-manufacturers-btn">
-            <a class="btn" href="manufacturers.html">Все производители</a>
-          </div>
+          <!-- Лишние блоки .manufacturers-title и .all-manufacturers-btn, обойдемся без них -->
+					<!-- убрал лишние блоки .manufacturers-title добавил к h2 --> 
+          <h2 class="manufacturers-title">Популярные производители:</h2>
+          <a class="btn" href="manufacturers.html">Все производители</a>         
         </div>
         
         <div class="manufacturers-items">
           
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="bosch.jpg" width="100" height="50" alt="Bosch">
-              </a>
-            </figure>
+          <div class="popular-manufacturers-item">  
+            <!-- Здесь надо либо вместо div заворачивать картинку в figure, либо убрать figure внутри. Вместо их лучше не использовать, только дополнительную вложенность создают -->
+            <!-- убрал figure -->
+						
+            <a href="#">
+              <img src="bosch.jpg" width="100" height="50" alt="Bosch">
+            </a>
+            
+          </div>
+          
+          <div class="popular-manufacturers-item">                        
+            <a href="#">
+              <img src="makita.jpg" width="100" height="50" alt="Makita">
+            </a>            
+          </div>
+          
+          <div class="popular-manufacturers-item">                       
+            <a href="#">
+              <img src="dewalt.jpg" width="100" height="50" alt="Dewalt">
+            </a>            
           </div>
           
           <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="makita.jpg" width="100" height="50" alt="Makita">
-              </a>
-            </figure>
-          </div>
-          
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="dewalt.jpg" width="100" height="50" alt="Dewalt">
-              </a>
-            </figure>
-          </div>
-          
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="interskol.jpg" width="100" height="50" alt="Интерскол">
-              </a>
-            </figure>
+          	<a href="#">
+            	<img src="interskol.jpg" width="100" height="50" alt="Интерскол">
+            </a>            
           </div>
 
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="hitachi.jpg" width="100" height="50" alt="Hitachi">
-              </a>
-            </figure>
+          <div class="popular-manufacturers-item">                       
+           	<a href="#">
+            	<img src="hitachi.jpg" width="100" height="50" alt="Hitachi">
+            </a>  
+          </div>
+          
+          <div class="popular-manufacturers-item">                     
+          	<a href="#">
+          		<img src="lg.jpg" width="100" height="50" alt="LG">
+          	</a>
+          </div>
+          
+          <div class="popular-manufacturers-item">         
+						<a href="#">
+							<img src="aec.jpg" width="100" height="50" alt="Aec">
+						</a>
           </div>
           
           <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="lg.jpg" width="100" height="50" alt="LG">
-              </a>
-            </figure>
-          </div>
-          
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="aec.jpg" width="100" height="50" alt="Aec">
-              </a>
-            </figure>
-          </div>
-          
-          <div class="popular-manufacturers-item">            
-            <figure>
-              <a href="#">
-                <img src="metabo.jpg" width="100" height="50" alt="Metabo">
-              </a>
-            </figure>
+            <a href="#">
+              <img src="metabo.jpg" width="100" height="50" alt="Metabo">
+            </a>
           </div>
       
         </div> <!-- end popular-manufacturers-items -->
@@ -280,20 +368,18 @@
   </main>
   
   <div class="services">
-    <div class="container">
-      
-      <section class="services-title-block">
+    <div class="container">   
+      <section class="services-title-block">        
+				<h2 class="services-title">Сервисы</h2>                           
         
-        <div class="services-title">                    <!-- не лишний div ? -->
-          <h2>Сервисы</h2>                              <!-- может <h2 class="services-title">   -->
-        </div>
         
-        <div class="services-description">
-          <p>
-            Хороший интернет-магазин отличается от плохого не только ценами!
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными 
-          </p>
-        </div>      
+        <!-- Да. Блоки .services-title и .services-description лишние --> 
+				<!-- Убрал лишние блоки -->
+        
+        <p class="services-description">
+          Хороший интернет-магазин отличается от плохого не только ценами!
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными 
+        </p>        
         
       </section> <!-- end services-title-block -->
       
@@ -313,17 +399,57 @@
           </ul>
         </div> <!-- end services-tab-block -->
         
+				
+				
+				
+				  <!-- 
+            Блоки .services-item-title и .services-item-description лишние,
+            НО надо добавить еще два блока - по гарантии и кредиту и каждый из трех обернуть отдельно в блок, чтобы они отделялись друг от друга
+            Грузовичок и все остальные, правильно, bg-image
+          -->					
+				<!-- Добавил -->
+				
         <div class="services-item-block">
-          <div class="services-item-title">        <!-- тот же вопрос: не лишний div ? -->
-            <h2>Доставка</h2>                      <!-- может <h2 class="services-item-title"> ?-->
-          </div>
-          
-          <div class="services-item-description">   <!-- картинка "грузовичка" background-image ? -->  
-            <p>
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-            </p>            
-          </div>
+				
+					<div class="nav-services-block">
+						<ul class="nav-services-list">
+							<li class="nav-services-item">
+								<a href="#">Доставка</a>
+							</li>
+							<li class="nav-services-item">
+								<a href="#">Гарантия</a>
+							</li>
+							<li class="nav-services-item">
+								<a href="#">Кредит</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="services-description">
+						<div class="service-delivery">						
+							<h2 class="services-item-title">Доставка</h2>                                
+							<p class="services-item-description">
+								Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+								совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+							</p>            
+						</div>
+
+						<div class="service-garanty">						
+							<h2 class="services-item-title">Гарантия</h2>                                
+							<p class="services-item-description">
+								Все про гарантию
+							</p>            
+						</div>
+
+						<div class="service-credit">						
+							<h2 class="services-item-title">Кредит</h2>                                
+							<p class="services-item-description">
+								Все про кредит
+							</p>            
+						</div>
+					</div>
+					
+
         </div> <!-- end services-item-block -->
         
       </section> <!-- end services-content-block -->
@@ -336,6 +462,8 @@
       
       <section class="about-company">
         <h2>Компания "Техномарт"</h2>                 <!-- тот же вопрос стоит ли заворачивать здесь <h2>,<p> и <a> в отдельные div ?--> 
+
+        <!-- Нет, в данной ситуации заворачивать не стоит. -->
         <p>
           Настоящий мужкой шоппингначинается здесь! 
           Огромный выбор товаров для ремонта и строительства не оставит
@@ -381,91 +509,102 @@
     </div> <!-- end container -->
   </div> <!-- end about-contacts-block -->
   
-  <div class="bottom-content">
-    <div class="container">
-      
-      <div class="bottom-logo">
-        <a href="/">
-          <p>ТЕХНОМАРТ</p> 
-        </a>
-      </div>
-      
-      <nav class="bottom-nav">
-        <ul class="bottom-nav-list">
-          <li class="bottom-nav-item">
-            <a href="#">Компания</a>
-          </li>
-          <li class="bottom-nav-item">
-            <a href="#">Новости</a>
-          </li>
-          <li class="bottom-nav-item">
-            <a href="#">Каталог</a>
-          </li>
-          <li class="bottom-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="bottom-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav> <!-- end bottom-nav -->
-      
-      <div class="bottom-contacts-block">
-        <address>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          +7 (812) 555-05-55
-        </address>         
-      </div> <!-- end bottom-contacts-block -->
-      
-      <nav class="bottom-features-nav">
-        <ul class="bottom-features-list">
-          <li class="bottom-features-item">
-            <a href="#">Компания</a>
-          </li>
-          <li class="bottom-features-item">
-            <a href="#">Новости</a>
-          </li>
-          <li class="bottom-features-item">
-            <a href="#">Каталог</a>
-          </li>
-          <li class="bottom-features-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="bottom-features-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav> <!-- end bottom-features-nav -->
-      
-    </div> <!-- end container -->  
-  </div> <!-- end bottom-content -->
+
+  <!-- Идеологически футер начинается именно здесь :)
+    
+  Здесь нужен тэг footer, внутри которого уже будут все вложенные блоки
+
+  -->
+	
+	<footer class="footer-main-page">
+  	<div class="container">
+  		<div class="bottom-content">
+    
+				<div class="bottom-logo">
+					<a href="/">
+						<!-- Не нужны p и капс -->
+						<!-- Убрал -->
+						Техномарт
+					</a>
+				</div>
+
+				<nav class="bottom-nav">
+					<ul class="bottom-nav-list">
+						<li class="bottom-nav-item">
+							<a href="#">Компания</a>
+						</li>
+						<li class="bottom-nav-item">
+							<a href="#">Новости</a>
+						</li>
+						<li class="bottom-nav-item">
+							<a href="#">Каталог</a>
+						</li>
+						<li class="bottom-nav-item">
+							<a href="#">Доставка</a>
+						</li>
+						<li class="bottom-nav-item">
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav> <!-- end bottom-nav -->
+
+				<div class="bottom-contacts-block">
+					<address>
+						г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+						+7 (812) 555-05-55
+					</address>         
+				</div> <!-- end bottom-contacts-block -->
+
+				<nav class="bottom-features-nav">
+					<ul class="bottom-features-list">
+						<li class="bottom-features-item">
+							<a href="#">Компания</a>
+						</li>
+						<li class="bottom-features-item">
+							<a href="#">Новости</a>
+						</li>
+						<li class="bottom-features-item">
+							<a href="#">Каталог</a>
+						</li>
+						<li class="bottom-features-item">
+							<a href="#">Доставка</a>
+						</li>
+						<li class="bottom-features-item">
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav> <!-- end bottom-features-nav -->
+  		</div> <!-- end bottom-content -->
   
-  <footer class="footer-main-page">
-    <div class="container">
+
       <div class="footer-copyright">
         <p> 
           2010-2016 Компания "Техномарт"
           Все права защищены            
         </p>
       </div>
+      <!-- А здесь верстка поплыла, 
+      Нет вложенности, нарушено оформление кода.
+      Надо поправить -->
+			<!-- поправил -->
       <div class="footer-social">         
         <ul class="social-list">
-	     <li class="social-item">
-		    <a href="#" class="social-link social-link-vk">
-		    vk
-		    </a>
-          </li>
-       <li class="social-item">
-		  <a href="#" class="social-link social-link-fb">
-		  fb
-		  </a>
-       </li>
-       <li class="social-item">
-		  <a href="#" class="social-link social-link-inst">
-		  instagram
-		  </a>
-       </li>
-		  </ul>          
+				 <li class="social-item">
+						<a href="#" class="social-link social-link-vk">
+							vk
+						</a>
+				 </li>
+				 <li class="social-item">
+					<a href="#" class="social-link social-link-fb">
+						fb
+				 </a>
+				 </li>
+				 <li class="social-item">
+					<a href="#" class="social-link social-link-inst">
+						instagram
+					</a>
+				 </li>
+				</ul>          
       </div>
       <div class="footer-feed-back">
         <p>
