@@ -39,8 +39,7 @@
       </div> 
             
       <div class="cart-block">
-        <a href="cart.html">
-          <img src="img/icon-cart.jpg" width="10" height="10" alt="Cart">
+        <a href="cart.html">          
         </a>                
         <p>Корзина: 0</p>
       </div> 
@@ -211,8 +210,8 @@
             должно быть ссылкой, которая в будушем будет вести нас в карточку товара (думаем на перед, чтобы потом не переделывать :) )-->
 						<!-- h2 везде убрал, добавил <a> --> 
             <div class="item-title">
-							<a href="#">Перфоратор BOSH BFG9000</a>
-						</div>
+			 <a href="#">Перфоратор BOSH BFG9000</a>
+			</div>
 
             <div class="old-price">32500 р.</div>            
             <div class="price-block">          <!-- везде добавлен div т.к. смутило как потом сделать этот хитрый шильдик на красном фоне :) -->
@@ -223,25 +222,27 @@
 											<div class="old-price">22500 р.</div>            
 												<div class="price-block">     
 													<div class="price">15500 р.</div> 
+                                                </div>
 											</div>                          
 										</div>
 								? -->
 							
               <div class="price">25500 р.</div>     
             </div> 
+          </article>
             <!-- Ты забыл разместить всплывающий блок со ссылками Купить и В корзину и блок который говорит нам, что товар NEW. Их можно разместить после всех элементов article, в конце. -->
 						
-						<!-- добавил последний article с всплывающими кнопками Купить и В корзину --> 
-						<!-- в предпоследнем article добавлен .products-item-new. Этот класс сможет добавить  надпись NEW с помощью CSS? -->
-          </article>
+						<!-- добавил последний article с всплывающими кнопками Купить и В корзину
+                        -->
+          
 
           <article class="products-item">            
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
             <div class="item-title">
-							<a href="#">Перфоратор BOSH BFG3000</a>
-						</div>
+				<a href="#">Перфоратор BOSH BFG3000</a>
+		    </div>
             <div class="old-price">22500 р.</div>            
             <div class="price-block">     
               <div class="price">15500 р.</div> 
@@ -253,33 +254,29 @@
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
             <div class="item-title">
-							<a href="#">Перфоратор BOSH BFG6000</a>
-						</div>
+			  <a href="#">Перфоратор BOSH BFG6000</a>
+			</div>
             <div class="old-price">30500 р.</div>            
             <div class="price-block">
               <div class="price">25500 р.</div> 
             </div>                          
           </article> 
           
-          <article class="products-item products-item-new">            
+          <article class="products-item">  
+            <div class="products-item-new"></div>  <!-- надпись NEW -->
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
             <div class="item-title">
-							<a href="#">Перфоратор BOSH BFG2000</a>
-						</div>                        
+              <a href="#">Перфоратор BOSH BFG2000</a>
+		    </div>                        
             <div class="price-block">
               <div class="price">25500 р.</div> 
             </div>                          
           </article> 
-					
-					<!-- посмотрел еще раз на картинки товаров: 
-					Получается, что есть 
-					- новые товары (с надписью NEW в углу и без старой цены) = .products-item-new
-					- не новые товары (без надписи NEW) в углу и без старой цены = .without-old-price
-					- не новые товары с перечеркнутой старой ценой = products-item															
-					-->
-					<article class="products-item products-item-new without-old-price">            
+
+			<article class="products-item">            
+              <div class="products-item-new"></div>  <!-- надпись NEW -->
               <div class="item-btn-block"> 
                 <!-- Здесь лучше вместо button использовать a, будет проще при стилизации -->
 								<!-- исправлено на <a> -->
@@ -287,8 +284,8 @@
                 <a href="#" class="btn-to-bookmarks">В закладки</a>
               </div>
               <div class="item-title">
-								<a href="#">Перфоратор BOSH BFG2000</a>
-							</div>                                  
+				<a href="#">Перфоратор BOSH BFG2000</a>
+			  </div>                                  
               <div class="price-block">                               <!-- отсутствует раздел со старой ценой -->
               	<div class="price">12500 р.</div> 
               </div>                          
@@ -349,9 +346,9 @@
           </div>
           
           <div class="popular-manufacturers-item">         
-						<a href="#">
-							<img src="aec.jpg" width="100" height="50" alt="Aec">
-						</a>
+		    <a href="#">
+			 <img src="aec.jpg" width="100" height="50" alt="Aec">
+			</a>
           </div>
           
           <div class="popular-manufacturers-item">            
@@ -385,24 +382,8 @@
       
       <section class="services-content-block">
         
-        <div class="services-tab-block">
-          <ul class="services-tab-list">
-            <li class="services-tab-item">
-              Доставка
-            </li>
-            <li class="services-tab-item">
-              Гарантия
-            </li>
-            <li class="services-tab-item">
-              Кредит
-            </li>
-          </ul>
-        </div> <!-- end services-tab-block -->
-        
 				
-				
-				
-				  <!-- 
+        <!-- 
             Блоки .services-item-title и .services-item-description лишние,
             НО надо добавить еще два блока - по гарантии и кредиту и каждый из трех обернуть отдельно в блок, чтобы они отделялись друг от друга
             Грузовичок и все остальные, правильно, bg-image
@@ -411,44 +392,43 @@
 				
         <div class="services-item-block">
 				
-					<div class="nav-services-block">
-						<ul class="nav-services-list">
-							<li class="nav-services-item">
-								<a href="#">Доставка</a>
-							</li>
-							<li class="nav-services-item">
-								<a href="#">Гарантия</a>
-							</li>
-							<li class="nav-services-item">
-								<a href="#">Кредит</a>
-							</li>
-						</ul>
-					</div>
+		  <div class="nav-services-block">
+		    <ul class="nav-services-list">
+			  <li class="nav-services-item">
+				<a href="#">Доставка</a>
+			  </li>
+			  <li class="nav-services-item">
+			    <a href="#">Гарантия</a>
+		      </li>
+			  <li class="nav-services-item">
+			    <a href="#">Кредит</a>
+		      </li>
+		    </ul>
+		  </div>
 					
-					<div class="services-description">
-						<div class="service-delivery">						
-							<h2 class="services-item-title">Доставка</h2>                                
-							<p class="services-item-description">
-								Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-								совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-							</p>            
-						</div>
+		  <div class="services-description">
+		    <div class="service-delivery">						
+		      <h2 class="services-item-title">Доставка</h2>                                
+			  <p class="services-item-description">
+				Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+				совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+			  </p>            
+		    </div>
 
-						<div class="service-garanty">						
-							<h2 class="services-item-title">Гарантия</h2>                                
-							<p class="services-item-description">
-								Все про гарантию
-							</p>            
-						</div>
+ 		   <div class="service-garanty">						
+		     <h2 class="services-item-title">Гарантия</h2>                                
+		       <p class="services-item-description">
+			    Все про гарантию
+			   </p>            
+		   </div>
 
-						<div class="service-credit">						
-							<h2 class="services-item-title">Кредит</h2>                                
-							<p class="services-item-description">
-								Все про кредит
-							</p>            
-						</div>
-					</div>
-					
+           <div class="service-credit">						
+             <h2 class="services-item-title">Кредит</h2>                                
+               <p class="services-item-description">
+                 Все про кредит
+               </p>            
+           </div>
+		  </div>	
 
         </div> <!-- end services-item-block -->
         
@@ -515,12 +495,13 @@
   Здесь нужен тэг footer, внутри которого уже будут все вложенные блоки
 
   -->
-	
+	<!-- footer перенёс выше -->
 	<footer class="footer-main-page">
-  	<div class="container">
-  		<div class="bottom-content">
+  	
+  		<div class="footer-top-block">
+          <div class="container">
     
-				<div class="bottom-logo">
+				<div class="footer-top-logo">
 					<a href="/">
 						<!-- Не нужны p и капс -->
 						<!-- Убрал -->
@@ -528,95 +509,90 @@
 					</a>
 				</div>
 
-				<nav class="bottom-nav">
-					<ul class="bottom-nav-list">
-						<li class="bottom-nav-item">
+				<nav class="footer-top-nav">
+					<ul class="footer-top-list">
+						<li class="footer-nav-item">
 							<a href="#">Компания</a>
 						</li>
-						<li class="bottom-nav-item">
+						<li class="footer-nav-item">
 							<a href="#">Новости</a>
 						</li>
-						<li class="bottom-nav-item">
+						<li class="footer-nav-item">
 							<a href="#">Каталог</a>
 						</li>
-						<li class="bottom-nav-item">
+						<li class="footer-nav-item">
 							<a href="#">Доставка</a>
 						</li>
-						<li class="bottom-nav-item">
+						<li class="footer-nav-item">
 							<a href="#">Контакты</a>
 						</li>
 					</ul>
-				</nav> <!-- end bottom-nav -->
+				</nav> <!-- end footer-top-nav -->
 
-				<div class="bottom-contacts-block">
+				<div class="footer-contacts-block">
 					<address>
 						г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 						+7 (812) 555-05-55
 					</address>         
-				</div> <!-- end bottom-contacts-block -->
+				</div> <!-- end footer-contacts-block -->
 
-				<nav class="bottom-features-nav">
-					<ul class="bottom-features-list">
-						<li class="bottom-features-item">
+				<nav class="footer-features-nav">
+					<ul class="footer-features-list">
+						<li class="footer-features-item">
 							<a href="#">Компания</a>
 						</li>
-						<li class="bottom-features-item">
+						<li class="footer-features-item">
 							<a href="#">Новости</a>
 						</li>
-						<li class="bottom-features-item">
+						<li class="footer-features-item">
 							<a href="#">Каталог</a>
 						</li>
-						<li class="bottom-features-item">
+						<li class="footer-features-item">
 							<a href="#">Доставка</a>
 						</li>
-						<li class="bottom-features-item">
+						<li class="footer-features-item">
 							<a href="#">Контакты</a>
 						</li>
 					</ul>
 				</nav> <!-- end bottom-features-nav -->
-  		</div> <!-- end bottom-content -->
+            </div> <!-- end container -->
+  		</div> <!-- end footer-top-block -->
   
-
-      <div class="footer-copyright">
-        <p> 
-          2010-2016 Компания "Техномарт"
-          Все права защищены            
-        </p>
-      </div>
-      <!-- А здесь верстка поплыла, 
-      Нет вложенности, нарушено оформление кода.
-      Надо поправить -->
-			<!-- поправил -->
-      <div class="footer-social">         
-        <ul class="social-list">
-				 <li class="social-item">
-						<a href="#" class="social-link social-link-vk">
-							vk
-						</a>
-				 </li>
-				 <li class="social-item">
-					<a href="#" class="social-link social-link-fb">
-						fb
-				 </a>
-				 </li>
-				 <li class="social-item">
-					<a href="#" class="social-link social-link-inst">
-						instagram
-					</a>
-				 </li>
-				</ul>          
-      </div>
-      <div class="footer-feed-back">
-        <p>
-          Обратная связь:
-        </p>
-        <a class="email-feed-back" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>        
-      </div>
-      <div class="footer-copyright">
-        <p>Разработано-</p>
-        <a class="email-feed-back" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>        
-      </div>
-    </div> <!-- end container -->
+        <div class="footer-bottom-block">
+          <div class="footer-bottom-copyright">
+            <p> 
+              2010-2016 Компания "Техномарт"
+              Все права защищены            
+            </p>
+          </div>
+          <!-- А здесь верстка поплыла, 
+          Нет вложенности, нарушено оформление кода.
+          Надо поправить -->
+                <!-- поправил -->
+          <div class="footer-bottom-social">         
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="#" class="social-link social-link-vk">vk</a>
+              </li>
+              <li class="social-item">
+                <a href="#" class="social-link social-link-fb">fb</a>
+              </li>
+              <li class="social-item">
+                <a href="#" class="social-link social-link-inst">instagram</a>
+              </li>
+            </ul>          
+          </div>
+          <div class="footer-bottom-feedback">
+            <p>
+              Обратная связь:
+            </p>
+            <a class="email-feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>        
+          </div>
+          <div class="footer-bottom-copyright">
+            <p>Разработано-</p>
+            <a class="link-feedback" href="www.htmlacademy.ru">htmlacademy.ru</a>        
+          </div>
+        </div> <!-- end footer-bottom-block -->
   </footer>
 </body>
 </html>
