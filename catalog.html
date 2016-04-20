@@ -60,27 +60,18 @@
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div> <!-- end contacts-block -->
                 
-        <div class="top-user-block">                        <!-- опять же возможно картинка через background-image ? -->
-        <!-- Верно! -->
-          <!-- Блок и p не нужны, Равшан будет ссылкой -->
-          <!-- -->
-          <a class="user-field" href="#">Равшан Джамшутович</a>          
+        <div class="top-user-block">                        
 
-          <!-- Logout тоже будет ссылкой, которой мы фоном сделаем картинку. Button можно убрать.            
-           -->
-          <!-- Убрал -->
+          <a class="user-field" href="#">Равшан Джамшутович</a>          
           <a class="btn-logout" href="#"> </a>
-          
-          <!-- .orders-personal-block лишний, ul здесь прекрасно выполнит роль блока -->
-          <!-- Убрал лишний div -->
-            <ul class="orders-personal-list">
-              <li class="orders-personal-item">
-                <a href="#">Мои заказы</a>
-              </li>
-              <li class="orders-personal-item">
-                <a href="#">Личный кабинет</a>
-              </li>
-            </ul>
+          <ul class="orders-personal-list">
+            <li class="orders-personal-item">
+              <a href="#">Мои заказы</a>
+            </li>
+            <li class="orders-personal-item">
+              <a href="#">Личный кабинет</a>
+            </li>
+          </ul>
           
         </div> <!-- end user-block -->
                 
@@ -120,11 +111,6 @@
     <div class="container">           
   
       <div class="breadcrumbs">
-          <!-- 
-            Картинка Домой тоже должна входить в ul первым элементом списка
-            и быть ссылкой. Мы сделаем её с помощью bg-img, img надо убрать
-           -->
-          <!-- Добавил -->
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
               <a class="home" href="#"></a>
@@ -136,7 +122,6 @@
               <a href="#">Инструмент</a>
             </li>
             <li class="breadcrumbs-item">
-              <!-- В хлебных крошках последний элемент, страница, на которой мы сейчас находимся не должна быть ссылкой. Просто правило хорошего тона для SEO-продвижения. -->
               Перфораторы
             </li>
           </ul>        
@@ -226,10 +211,6 @@
             <div class="sorting-block">       <!-- Блок с типами сортировки -->
               <ul class="sorting-list">
                 <li class="sorting-item sorting-item-active">
-                  <!-- Вместо p надо добавить ссылки,
-                  в будущем пользователь будет кликать по ним, чтобы
-                  переключаться -->
-                  <!-- Добавил -->
                   <a href="#">По цене</a>
                 </li>
                 <li class="sorting-item">
@@ -256,13 +237,10 @@
                 <a href="#">Перфоратор BOSH BFG3000</a>
               </div>
               <div class="old-price">22500 р.</div>            
-              <div class="price-block">
-                <div class="price">15500 р.</div> 
-              </div>                          
+              <div class="price">15500 р.</div>               
           </article>
 
-          <article class="products-item">
-            <!-- Здесь надо учесть все что я сказал про блоки товаров в index.html -->
+          <article class="products-item">            
             <figure>
               <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
             </figure>
@@ -270,14 +248,13 @@
               <a href="#">Перфоратор BOSH BFG6000</a>
             </div>
             <div class="old-price">30500 р.</div>            
-            <div class="price-block">
-              <div class="price">25500 р.</div> 
-            </div>                          
+           	<div class="price">25500 р.</div>
           </article>
 
                                                                 <!-- новый товар (в углу надпись NEW) -->
                                                                 <!-- при наведении курсора появляются кнопки "Купить" и "В закладки" -->
-            <article class="products-item products-item-new without-old-price">            
+            <article class="products-item">            
+							<div class="products-item-new"></div>
               <div class="item-btn-block"> 
                 <!-- Здесь лучше вместо button использовать a, будет проще при стилизации -->
                 <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
@@ -285,10 +262,8 @@
               </div>
               <div class="item-title">
                 <a href="#">Перфоратор BOSH BFG2000</a>
-              </div>                                  
-                <div class="price-block">                               <!-- отсутствует раздел со старой ценой -->
-                <div class="price">12500 р.</div> 
-              </div>                          
+              </div>                                               
+                <div class="price">12500 р.</div>              
             </article> 
 
             <article class="products-item">            
@@ -299,13 +274,10 @@
                 <a href="#">Перфоратор BOSH BFG3000</a>
               </div>                        
               <div class="old-price">22500 р.</div>            
-              <div class="price-block">
-                <div class="price">15500 р.</div> 
-              </div>                          
+              <div class="price">15500 р.</div> 
             </article> 
 
             <article class="products-item">            <!-- новый товар в углу надпись NEW -->
-              <!-- Можно сделать как ты, в виде дополнительно класса к article, но я бы сделал в виде отдельного блока, чтобы в будущем облегчить работу программисту или самому себе, когда появление этого блока надо будет ставить под условие. Тут как сам решишь, оба варианты приемлимы -->
               <div class="products-item-new"></div>  <!-- надпись NEW -->
               <figure>
                 <img src="pic.jpg" width="100" height="50" alt="Перфоратор">
@@ -314,9 +286,7 @@
                 <a href="#">Перфоратор BOSH BFG6000</a>
               </div>                        
               <div class="old-price">30500 р.</div>            
-              <div class="price-block">
-                <div class="price">25500 р.</div> 
-              </div>                          
+              <div class="price">25500 р.</div>               
             </article> 
 
             <article class="products-item">             <!-- товар не новый, но без старой цены -->
@@ -327,9 +297,7 @@
                 <a href="#">Перфоратор BOSH BFG 2000</a>
               </div>                        
               <!--<p class="old-price">30500 р.</p> -->                   <!-- отсутствует раздел со старой ценой -->  
-              <div class="price-block">
-                <p class="price">12500 р.</p> 
-              </div>                          
+              <div class="price">12500 р.</div>               
             </article> 
 
             <article class="products-item">            
@@ -340,9 +308,7 @@
                 <a href="#">Перфоратор BOSH BFG 3000</a>
               </div>                        
               <div class="old-price">22500 р.</div> 
-              <div class="price-block">
-                <div class="price">15500 р.</div> 
-              </div>                          
+              <div class="price">15500 р.</div>               
             </article> 
 
             <article class="products-item">            
@@ -353,9 +319,7 @@
                 <a href="#">Перфоратор BOSH BFG 6000</a>
               </div>                        
               <div class="old-price">30500 р.</div> 
-              <div class="price-block">
-                <div class="price">25500 р.</div> 
-              </div>                          
+              <div class="price">25500 р.</div>              
             </article> 
 
             <article class="products-item">                   <!-- товар не новый, но без старой цены -->
@@ -365,21 +329,13 @@
               <div class="item-title">
                 <a href="#">Перфоратор BOSH BFG 2000</a>
               </div>                        
-              <!--<p class="old-price">30500 р.</p> -->                         <!-- отсутствует раздел со старой ценой -->
-              <div class="price-block">
-                <p class="price">12500 р.</p> 
-              </div>                          
+              <!--<p class="old-price">30500 р.</p> -->       <!-- отсутствует раздел со старой ценой -->
+              <div class="price">12500 р.</div> 
             </article> 
           </div> <!-- end items-block -->
       
-           
-          <!-- Не обязательно оборачивать в блок ul, здесь он может быть сам по себе -->
-          <!-- Убрал лишний блок -->
-          
             <ul class="pagination-list"> <!-- Блок с кнопками для страниц -->
-              <li class="paginator-item"> 
-                <!-- Как и в хлебных крошках, текущей странице лучше не быть ссылкой, тоже для SEO. Это необязательно делать, просто даю тебе рекомендации для красоты кода и исполнения  -->
-                <!-- Убрал ссылку -->
+              <li class="paginator-item paginator-item-active"> 
                 1
               </li>
               <li class="paginator-item"> 
@@ -392,7 +348,6 @@
                 <a class="pagitanation-link-next" href="#">Следующая</a> 
               </li>                    
             </ul>
-          
         
       </section> <!-- end main-items-block -->
       
@@ -408,9 +363,6 @@
     </p>
   </section>
   
-  
-  <!-- А кстати, имеет ли смысл разные классы присваивать footer ам если они на всех страницах одинаковые ? -->
-  
   <footer class="footer-catalog-page">
   	
   		<div class="footer-top-block">
@@ -418,8 +370,6 @@
     
 				<div class="footer-top-logo">
 					<a href="/">
-						<!-- Не нужны p и капс -->
-						<!-- Убрал -->
 						Техномарт
 					</a>
 				</div>
@@ -480,10 +430,7 @@
               Все права защищены            
             </p>
           </div>
-          <!-- А здесь верстка поплыла, 
-          Нет вложенности, нарушено оформление кода.
-          Надо поправить -->
-                <!-- поправил -->
+
           <div class="footer-bottom-social">         
             <ul class="social-list">
               <li class="social-item">
