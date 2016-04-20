@@ -1,0 +1,22 @@
+body {
+	font-size: 17px;
+	line-height: 17px;
+	color: #ffffff;
+	font-weight: regular;
+	font-family: "Cuprum Regular";
+}
+
+h1 {
+	font-size: 16px;
+	line-height: 23px;
+	color: #ee3643;	
+	font-weight: italic;
+	font-family: "Cuprum Italic";
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: "Cuprum Bold";
+}
