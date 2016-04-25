@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title> Техномарт - интернет-магазин строительных материалов и инструментов для ремонта </title>      
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
     
 <body>
   <header class="header-main-page">
-    <div class="container">
+    <div class="container clearfix">
             
       <div class="top-logo">
         <a href="/">
@@ -47,7 +48,7 @@
   <div class="top-page-block">
     <div class="container">
             
-      <div class="top-block">
+      <div class="top-block clearfix">
         
         <div class="top-info-block">
           <h1 class="top-info-title"> 
@@ -67,7 +68,7 @@
                 
       </div> <!-- end top-block -->
             
-      <nav class="nav-block">
+      <nav class="nav-block clearfix">
         <ul class="nav-list">
           <li class="nav-item"> 
             <a href="/">Главная</a> 
@@ -94,11 +95,11 @@
       </nav>
             
     </div> <!-- end container -->
-  </div> <!-- end top-menu -->
+  </div> <!-- end top-page-block -->
   
   <main class="main-content">
     <div class="container">
-      <div class="products-and-features">  <!-- группы товаров, скидки, доставка, слайдер -->
+      <div class="products-and-features clearfix">  <!-- группы товаров, скидки, доставка, слайдер -->
 
         <article class="products products-materials">               
           <h2>Материалы</h2>                                        
@@ -115,7 +116,7 @@
           <a class="btn btn-technics" href="#">Для стройки</a>
         </article> 
         
-        <div class="products-slider-block">          
+        <div class="products-slider-block clearfix">          
 			
 					<div class="products-slider">
 						<div class="slider-description">
@@ -165,12 +166,12 @@
       
       <section class="popular-products">
         
-        <div class="products-title-block">
+        <div class="products-title-block clearfix">
         	<h2 class="products-title">Популярные товары:</h2>        
           <a class="btn-popular-products" href="popular-products.html">Все популярные товары</a>
         </div>
         
-        <div class="popular-products-items">
+        <div class="popular-products-items clearfix">
           
           <article class="products-item">            
             <figure>
@@ -216,10 +217,11 @@
             <div class="price">25500 р.</div> 
           </article> 
 
+			<!--
 					<article class="products-item">            
-              <div class="products-item-new"></div>  <!-- надпись NEW -->
+              <div class="products-item-new"></div>  
               <div class="item-btn-block"> 
-                <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+                <a href="#" class="btn-buy">Купить</a>                
                 <a href="#" class="btn-to-bookmarks">В закладки</a>
               </div>
               <div class="item-title">
@@ -227,6 +229,7 @@
 			  			</div>                                  
               <div class="price">12500 р.</div> 
             </article> 
+				-->
         </div> <!-- end popular-product-items -->
         
       </section> <!-- end popular-products -->
@@ -235,10 +238,10 @@
         
         <div class="manufacturers-title-block">
           <h2 class="manufacturers-title">Популярные производители:</h2>
-          <a class="btn" href="manufacturers.html">Все производители</a>         
+          <a class="btn-popular-manufactures" href="manufacturers.html">Все производители</a>         
         </div>
         
-        <div class="manufacturers-items">
+        <div class="manufacturers-items clearfix">
           
           <div class="popular-manufacturers-item">  
             <a href="#">

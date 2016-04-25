@@ -1,9 +1,15 @@
+@font-face {
+    font-family: "Cuprum"; 
+    src: url('../fonts/web/cuprum.woff'); 
+}
+
+
 body {
 	font-size: 17px;
 	line-height: 17px;
 	color: #ffffff;
 	font-weight: regular;
-	font-family: "Cuprum Regular";
+	font-family: "Cuprum";
 }
 
 h1 {
@@ -11,12 +17,223 @@ h1 {
 	line-height: 23px;
 	color: #ee3643;	
 	font-weight: italic;
-	font-family: "Cuprum Italic";
+	font-family: "Cuprum";
 }
 h2 {
 	font-size: 24px;
 	line-height: 30px;
 	color: #ffffff;
 	font-weight: bold;
-	font-family: "Cuprum Bold";
+	font-family: "Cuprum";
+}
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+ul {
+  list-style: none;  /* убираем у всех списков точки и пробелы */
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  background-color: aquamarine;   
+}
+figure,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+.header-main-page {
+	height: 42px;
+	background-color: #293449;
+}
+.top-logo{
+	width: 220px;
+	height: 47px;
+	float: left;
+	background-color: #ee3643;
+	margin-right: 20px;
+}
+.searching-block {
+	width: 270px;
+	height: 42px;
+	float: left;
+	background-color: darkkhaki;
+	margin-right: 20px;
+}
+.bookmarks-block {
+	width: 120px;
+	height: 42px;
+	float: left;
+	background-color: darkkhaki;
+	margin-right: 20px;
+}
+.cart-block {
+	width: 100px;
+	height: 42px;
+	float: left;
+	background-color: darkkhaki;
+	margin-right: 20px;
+}
+.btn-make-order {
+	width: 150px;
+	height: 42px;
+	float: left;
+	background-color: #63a63e;	
+}
+.top-page-block {
+	background-color: #f1f5f7;
+}
+.top-block {
+	margin-top: 48px;
+	margin-bottom: 45px;	
+	width: 940px;
+	//border: 1px solid black;
+}
+.top-info-title {
+	width: 200px;
+	height: 65px;
+	background-color: burlywood;
+	float: left;
+	margin-right: 30px;
+	margin-left: 50px;
+}
+.top-contacts-block {
+	width: 310px;
+	height: 65px;
+	background-color: burlywood;
+	float: left;
+	margin-right: 30px;
+}
+.top-user-block {
+	width: 250px;
+	height: 65px;
+	background-color: burlywood;
+	float: right;
+}
+.nav-block {
+	width: 940px;
+	height: 60px;
+	background-color: #293449;	
+	margin-bottom: 60px;
+}
+.nav-block ul {
+	margin-left: 50px;
+	margin-top: 20px;
+  
+}
+.nav-block li {
+	float: left;
+	margin-right: 60px;
+}
+.top-page-block {
+	margin-bottom: 59px;
+}
+.products {             /* article */
+	width: 300px;
+	height: 123px;
+	float: left;
+	background-color: darkgrey;
+	margin-right: 20px;	
+}
+.products:nth-of-type(3){
+	margin-right: 0;
+}
+.products:nth-of-type(4),
+.products:nth-of-type(5) {
+	margin-right: 0;
+	margin-top: 20px;
+}
+
+.products-slider-block {
+	width: 620px;
+	height: 266px;
+	margin-right: 20px;
+	margin-top: 3px;              /* не смог понять почему у слайдера появился отступ в 7px */
+	float: left;
+}
+.products-and-features {
+	margin-bottom: 53px;	
+}
+.products-title-block {	
+	width: 940px;
+	height: 89px;
+	margin-bottom: 20px;
+	background-color: #f7f3ec;	
+}
+.products-title {
+	width: 270px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+	color: #32425c;	
+}
+.btn-popular-products,
+.btn-popular-manufactures {
+	width: 253px;	
+	float: right;
+	margin-right: 25px;
+	margin-top: 20px;	
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #ee3643;
+	text-align: center;
+	border-radius: 5px;
+	color: #ffffff;
+}
+.popular-products-items {
+	margin-bottom: 20px;
+}
+.products-item {
+	width: 217px;
+	height: 318px;
+	border: 1px solid #e5e5e5;
+	float: left;
+	margin-right: 20px;
+}
+.products-item:nth-child(4){
+	margin-right: 0;
+}
+.products-item figure {
+	margin: 6px 17px;
+}
+
+.manufacturers-title-block {
+	width: 940px;
+	height: 89px;
+	margin-bottom: 20px;
+	background-color: #f7f3ec;	
+}
+.manufacturers-title {
+	width: 380px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+	color: #32425c;	
+}
+.popular-manufacturers-item {
+	width: 218px;
+	height: 145px;
+	margin-right: 20px;
+	float: left;
+	border: 1px solid #e5e5e5; 
+}
+.popular-manufacturers-item:nth-child(4n){
+	margin-right: 0;
+}
+.manufacturers-items {	
+	margin-bottom: 70px;
+}
+.services {
+	background-color: #f2f6f8;
 }
