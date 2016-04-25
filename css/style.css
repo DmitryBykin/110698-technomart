@@ -42,7 +42,7 @@ ul li {
 }
 figure,
 p,
-h1 {
+h1,h2 {
   margin: 0;
   padding: 0;
 }
@@ -232,8 +232,92 @@ a {
 	margin-right: 0;
 }
 .manufacturers-items {	
-	margin-bottom: 70px;
+	margin-bottom: 90px;
 }
 .services {
 	background-color: #f2f6f8;
+}
+.services-title-block {
+  padding-top: 65px;  
+  padding-bottom: 5px;
+  //border: 1px solid red;
+}
+.services-title {
+  color: black;   
+  font-size: 30px;
+}
+.services-title-description {
+  width: 400px;
+  height: 60px;
+  padding-top: 36px;
+  color: black;
+  font-size: 14px;  
+  //border: 1px solid red;
+}
+.services-item-block {
+  width: 940px;  
+  //border: 1px solid red;
+}
+.nav-services-block {
+  width: 240px;  
+  //border: 1px solid black;
+  float: left;
+}
+.services-description {
+  width: 630px;
+  height: 310px;
+  //border: 1px solid black;
+  float: right;
+}
+.nav-services-block {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.nav-services-item {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 25px;  
+  background-color: #32425c;
+  border-bottom: 1px solid #293449;
+  font-size: 21px;
+  font-weight: bold;
+  color: white;
+}
+.item-active {
+  background-color: white;
+  color: #32425c;
+}
+.services-description h2 {
+  font-size: 25px; 
+  text-transform: uppercase;
+  color: #32425c;
+}
+.services-description {
+  margin-top: 40px;
+  color: black;
+}
+.services-item-description {
+  padding-top: 30px;
+  width: 270px;
+  height: 100px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.about-company {
+  width: 530px;
+  height: 385px;
+  float: left;
+  border: 1px solid green;
+  color: black;
+}
+.about-company h2,
+.map h2 {
+  color: black;
+}
+.map {
+  width: 307px;
+  height: 385px;
+  float: right;
+  border: 1px solid green;
+  color: black;
 }
