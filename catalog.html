@@ -9,12 +9,11 @@
     
 <body>
 
-	<header class="header-catalog">
-    <div class="container">
-            
-     	<a href="/">
-				<div class="top-logo">
-					Техномарт     
+  <header class="header-catalog">
+    <div class="container clearfix">
+      <a href="/">
+		<div class="top-logo">
+          Техномарт     
         </div>
       </a>
             
@@ -66,7 +65,7 @@
 
           <a class="user-field" href="#">Равшан Джамшутович</a>          
           <a class="btn-logout" href="#"> </a>
-          <ul class="orders-personal-list">
+          <ul class="orders-personal-list clearfix">
             <li class="orders-personal-item">
               <a href="#">Мои заказы</a>
             </li>
@@ -211,10 +210,9 @@
             </div>
 
             <div class="sorting-block">       <!-- Блок с типами сортировки -->
-              <ul class="sorting-list">
-								
+              <ul class="sorting-list">								
                 <li class="sorting-item sorting-item-active">
-                  По цене
+                  <a href="#">По цене</a>
                 </li>
                 <li class="sorting-item">
                   <a href="#">По типу</a>
@@ -232,6 +230,8 @@
           </div> <!-- end sorting -->
         
         <div class="items-block clearfix">                   <!-- Блок с перфораторами -->
+          
+          
           <article class="products-item">            
             <figure>
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="112" alt="Перфоратор">
@@ -256,8 +256,9 @@
 
                                                                 <!-- новый товар (в углу надпись NEW) -->
                                                                 <!-- при наведении курсора появляются кнопки "Купить" и "В закладки" -->
+            
             <article class="products-item">            
-							<div class="products-item-new"></div>
+		      <div class="products-item-new"></div>
               <div class="item-btn-block"> 
                 <!-- Здесь лучше вместо button использовать a, будет проще при стилизации -->
                 <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
@@ -268,8 +269,8 @@
               </div>                                               
                 <div class="price">12500 р.</div>              
             </article> 
-
-            <article class="products-item">            
+          
+           <article class="products-item">            
               <figure>
                 <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="112" alt="Перфоратор">
               </figure>
@@ -279,7 +280,7 @@
               <div class="old-price">22500 р.</div>            
               <div class="price">15500 р.</div> 
             </article> 
-
+      
             <article class="products-item">            <!-- новый товар в углу надпись NEW -->
               <div class="products-item-new"></div>  <!-- надпись NEW -->
               <figure>
@@ -291,7 +292,7 @@
               <div class="old-price">30500 р.</div>            
               <div class="price">25500 р.</div>               
             </article> 
-
+     
             <article class="products-item">             <!-- товар не новый, но без старой цены -->
               <figure>
                 <img src="img/perf_BOSCH_BFG2000.jpg" width="127" height="112" alt="Перфоратор">
@@ -335,21 +336,29 @@
               <!--<p class="old-price">30500 р.</p> -->       <!-- отсутствует раздел со старой ценой -->
               <div class="price">12500 р.</div> 
             </article> 
+          
+     
           </div> <!-- end items-block -->
       
-            <ul class="pagination-list"> <!-- Блок с кнопками для страниц -->
+            <ul class="pagination-list clearfix"> <!-- Блок с кнопками для страниц -->
               <li class="paginator-item paginator-item-active"> 
                 1
               </li>
-              <li class="paginator-item"> 
-                <a class="paginator-link" href="#">2</a> 
-              </li>
-              <li class="paginator-item">
-                <a class="pagitanation-link" href="#">3</a> 
-              </li>
-              <li class="paginator-item">
-                <a class="pagitanation-link-next" href="#">Следующая</a> 
-              </li>                    
+              <a class="paginator-link" href="#">
+                <li class="paginator-item"> 
+                  2
+                </li>
+              </a> 
+              <a class="pagitanation-link" href="#">
+                <li class="paginator-item">
+                  3 
+                </li>
+              </a>
+              <a class="pagitanation-link-next" href="#">
+                <li class="paginator-item paginator-item-next">
+                  Следующая
+                </li>                    
+              </a> 
             </ul>
         
       </section> <!-- end main-items-block -->
@@ -358,18 +367,20 @@
   </main>
   
   <section class="about-product">
-    <h2>Пара слов о перфораторах</h2>
-    <p>Перфоратор- универсальный строительный инструмент. Предназначен для сверления и долбления отверстий 
-      в кирпиче, бетоне и камне. Существуют электромеханические м пневматические перфораторы. 
-      Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассориментном ряду
-      есть выбор "трехрежимников": в одном устройтсве будут совмещены шуруповерт и ударная дрель.
-    </p>
+    <div class="container">
+      <h2>Пара слов о перфораторах</h2>
+      <p>Перфоратор- универсальный строительный инструмент. Предназначен для сверления и долбления отверстий 
+        в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. 
+        Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассориментном ряду
+        есть выбор "трехрежимников": в одном устройтсве будут совмещены шуруповерт и ударная дрель.
+      </p>
+    </div>
   </section>
   
   <footer class="footer-catalog-page">
   	
   		<div class="footer-top-block">
-          <div class="container">
+          <div class="container clearfix">
     
 				<div class="footer-top-logo">
 					<a href="/">
@@ -396,7 +407,9 @@
 						</li>
 					</ul>
 				</nav> <!-- end footer-top-nav -->
-
+		    </div>
+				
+			<div class="container clearfix">
 				<div class="footer-contacts-block">
 					<address>
 						г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -404,59 +417,58 @@
 					</address>         
 				</div> <!-- end footer-contacts-block -->
 
-				<nav class="footer-features-nav">
-					<ul class="footer-features-list">
-						<li class="footer-features-item">
-							<a href="#">Компания</a>
-						</li>
-						<li class="footer-features-item">
-							<a href="#">Новости</a>
-						</li>
-						<li class="footer-features-item">
-							<a href="#">Каталог</a>
-						</li>
-						<li class="footer-features-item">
-							<a href="#">Доставка</a>
-						</li>
-						<li class="footer-features-item">
-							<a href="#">Контакты</a>
-						</li>
-					</ul>
-				</nav> <!-- end bottom-features-nav -->
+					<nav class="footer-features-nav">
+						<ul class="footer-features-list">
+							<li class="footer-features-item">
+								<a href="#">Материалы</a>
+							</li>
+							<li class="footer-features-item">
+								<a href="#">Техника</a>
+							</li>
+							<li class="footer-features-item">
+								<a href="#">Инструмент</a>
+							</li>
+							<li class="footer-features-item">
+								<a href="#">Спецпредложения</a>
+							</li>							
+						</ul>
+					</nav> <!-- end bottom-features-nav -->
             </div> <!-- end container -->
   		</div> <!-- end footer-top-block -->
   
         <div class="footer-bottom-block">
-          <div class="footer-bottom-copyright">
-            <p> 
-              2010-2016 Компания "Техномарт"
-              Все права защищены            
-            </p>
-          </div>
+		  <div class="container clearfix">
+		    <div class="footer-bottom-copyright">
+			   <p> 
+				2010-2016 Компания "Техномарт"
+				Все права защищены            
+				</p>
+		    </div>
 
-          <div class="footer-bottom-social">         
-            <ul class="social-list">
-              <li class="social-item">
-                <a href="#" class="social-link social-link-vk">vk</a>
-              </li>
-              <li class="social-item">
-                <a href="#" class="social-link social-link-fb">fb</a>
-              </li>
-              <li class="social-item">
-                <a href="#" class="social-link social-link-inst">instagram</a>
-              </li>
-            </ul>          
-          </div>
-          <div class="footer-bottom-feedback">
-            <p>
-              Обратная связь:
-            </p>
-            <a class="email-feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>        
-          </div>
-          <div class="footer-bottom-copyright">
-            <p>Разработано-</p>
-            <a class="link-feedback" href="www.htmlacademy.ru">htmlacademy.ru</a>        
-          </div>
+			<div class="footer-bottom-social">         
+			  <ul class="social-list clearfix">
+				<li class="social-item">
+                  <a href="#" class="social-link social-link-vk">vk</a>
+				</li>
+				<li class="social-item">
+				  <a href="#" class="social-link social-link-fb">fb</a>
+				</li>
+				<li class="social-item">
+				  <a href="#" class="social-link social-link-inst">instagram</a>
+				</li>
+		      </ul>          
+		    </div>
+			<div class="footer-bottom-feedback">
+			 <p>
+			   Обратная связь:
+		     </p>
+			 <a class="email-feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>        
+			</div>
+			<div class="footer-bottom-develop">
+			  <p>Разработано-</p>
+			  <a class="link-feedback" href="www.htmlacademy.ru">htmlacademy.ru</a>        
+			</div>
+		  </div> <!-- end container -->
         </div> <!-- end footer-bottom-block -->
   </footer>
 </body>
