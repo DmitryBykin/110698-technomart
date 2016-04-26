@@ -3,12 +3,11 @@
     src: url('../fonts/web/cuprum.woff'); 
 }
 
-
 body {
 	font-size: 17px;
 	line-height: 17px;
 	color: #ffffff;
-	font-weight: regular;
+	font-weight: normal;	
 	font-family: "Cuprum";
 }
 
@@ -16,14 +15,14 @@ h1 {
 	font-size: 16px;
 	line-height: 23px;
 	color: #ee3643;	
-	font-weight: italic;
+	font-weight: normal;
 	font-family: "Cuprum";
 }
 h2 {
 	font-size: 24px;
 	line-height: 30px;
 	color: #ffffff;
-	font-weight: bold;
+	font-weight: normal;
 	font-family: "Cuprum";
 }
 
@@ -37,8 +36,8 @@ ul {
   padding: 0;
   margin: 0;
 }
-ul li {
-  background-color: aquamarine;   
+ul li {	
+  //background-color: aquamarine;   
 }
 figure,
 p,
@@ -51,13 +50,15 @@ a {
 }
 .container {
 	width: 940px;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
-.header-main-page {
+.header-main-page,
+.header-catalog {
 	height: 42px;
 	background-color: #293449;
 }
-.top-logo{
+.top-logo,
+.footer-top-logo {
 	width: 220px;
 	height: 47px;
 	float: left;
@@ -93,6 +94,7 @@ a {
 }
 .top-page-block {
 	background-color: #f1f5f7;
+	margin-bottom: 59px;
 }
 .top-block {
 	margin-top: 48px;
@@ -129,16 +131,16 @@ a {
 }
 .nav-block ul {
 	margin-left: 50px;
-	margin-top: 20px;
-  
+	margin-top: 20px;  
+}
+.nav-block a {
+	color: #ffffff;
 }
 .nav-block li {
 	float: left;
 	margin-right: 60px;
 }
-.top-page-block {
-	margin-bottom: 59px;
-}
+
 .products {             /* article */
 	width: 300px;
 	height: 123px;
@@ -178,18 +180,22 @@ a {
 	margin-top: 30px;
 	color: #32425c;	
 }
+.btncom {
+	display: block;
+	background-color: #ee3643;
+	padding-top: 15px;
+	padding-bottom: 15px;	
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	border-radius: 5px;		
+}
 .btn-popular-products,
 .btn-popular-manufactures {
 	width: 253px;	
 	float: right;
 	margin-right: 25px;
 	margin-top: 20px;	
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #ee3643;
-	text-align: center;
-	border-radius: 5px;
-	color: #ffffff;
 }
 .popular-products-items {
 	margin-bottom: 20px;
@@ -239,40 +245,37 @@ a {
 }
 .services-title-block {
   padding-top: 65px;  
-  padding-bottom: 5px;
-  //border: 1px solid red;
+  padding-bottom: 5px; 
 }
 .services-title {
   color: black;   
   font-size: 30px;
+	text-transform: uppercase;
 }
 .services-title-description {
-  width: 400px;
+  width: 370px;
   height: 60px;
-  padding-top: 36px;
+  padding-top: 25px;
   color: black;
-  font-size: 14px;  
-  //border: 1px solid red;
+  font-size: 13px;  
+	line-height: 24px;		
 }
 .services-item-block {
   width: 940px;  
-  //border: 1px solid red;
+  padding-top: 50px;  	
 }
 .nav-services-block {
-  width: 240px;  
-  //border: 1px solid black;
-  float: left;
+  width: 240px;	  
+	//height: 260px;
+  float: left;	
 }
 .services-description {
-  width: 630px;
-  height: 310px;
-  //border: 1px solid black;
+  width: 625px;
+  height: 285px;  
   float: right;
+	background: url('../img/services-delivery.png') right bottom no-repeat;
 }
-.nav-services-block {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+
 .nav-services-item {
   padding-top: 20px;
   padding-bottom: 22px;
@@ -288,36 +291,241 @@ a {
   color: #32425c;
 }
 .services-description h2 {
-  font-size: 25px; 
+  font-size: 36px; 
   text-transform: uppercase;
   color: #32425c;
 }
-.services-description {
-  margin-top: 40px;
+.services-description {  
   color: black;
 }
 .services-item-description {
   padding-top: 30px;
-  width: 270px;
+  width: 250px;
   height: 100px;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 13px;  
+	line-height: 24px;
+}
+.services-content-block {
+	margin-bottom: 80px;
 }
 .about-company {
-  width: 530px;
-  height: 385px;
-  float: left;
-  border: 1px solid green;
+  width: 522px;
+  //height: 385px;
+  float: left; 
   color: black;
+	background-color: antiquewhite;
+	//padding-bottom: 25px;
 }
 .about-company h2,
 .map h2 {
+	font-size: 30px;
+	text-transform: uppercase;
   color: black;
 }
+.about-company p,
+.map p {
+	margin-top: 25px;
+	font-size: 13px;  
+	line-height: 24px;	
+}
+.about-company p:last-of-type {
+	margin-bottom: 25px;
+}
+.about-company li {	
+	margin-bottom: 25px;
+	font-size: 18px;
+	background: url('../img/about-company-item.jpg') left 50% no-repeat;
+	padding-left: 37px;
+}
+/*.about-company ul {
+	list-style-image: url('../img/about-company-item.jpg');
+	list-style-position: inside;
+}*/
+
+.btn-about {
+	width: 220px;			
+	margin-right: 25px;
+	margin-top: 40px;		
+}
 .map {
-  width: 307px;
-  height: 385px;
-  float: right;
-  border: 1px solid green;
+  width: 300px;
+  //height: 385px;
+	//padding-bottom: 8px;
+  float: right;  
   color: black;
+	background-color: antiquewhite;
+}
+.map figure {
+	margin-top: 39px;
+	margin-bottom: 39px;		
+}
+.footer-main-page {
+	margin-top: 87px;
+	background-color: #32425c;
+}
+.footer-top-nav {
+	width: 560px;
+	height: 47px;
+	float: right;
+	//background-color: antiquewhite;
+}
+.footer-top-nav li {
+	float: left;
+	margin-right: 60px;
+	margin-top: 25px;
+	font-size: 18px;	
+}
+.footer-top-nav li:last-of-type {
+	margin-right: 0;
+}
+.footer-top-nav a {
+	color: #f1f5f7;	
+}
+.footer-contacts-block {	
+	width: 335px;
+	height: 60px;
+	margin-top: 32px;
+	float: left;
+}
+.footer-features-nav {
+	width: 530px;
+	height: 60px;
+	margin-top: 32px;
+	float: right;
+}
+.footer-features-nav li {
+	margin-right: 60px;
+	float: left;
+}
+.footer-features-nav li:last-of-type {
+	margin-right: 0;	
+}
+.footer-features-nav a {
+	font-size: 18px;
+	color: #ffd180;
+}
+.footer-contacts-block address {
+	font-size: 18px;
+	font-style: normal;
+	color: #f1f5f7;
+}
+.footer-bottom-block {
+	margin-top: 55px;
+	background-color: #293449;
+}
+.footer-bottom-copyright {	
+	width: 240px;
+	height: 60px;
+	float: left;
+	padding-top: 35px;
+	margin-right: 155px;
+}
+.footer-bottom-social {
+	width: 170px;
+	height: 60px;
+	float: left;
+	padding-top: 35px;
+}
+.footer-bottom-social li {
+	float: left;
+}
+.footer-bottom-feedback {
+	width: 170px;
+	height: 60px;
+	float: left;
+	padding-top: 35px;
+}
+.footer-bottom-develop {
+	width: 100px;
+	height: 60px;
+	float: right;
+	padding-top: 35px;
+}
+/********************* catalog  ****************************/
+.catalog-top-page {
+	background-color: #f1f5f7;	
+}
+.orders-personal-item {
+	margin-right: 20px;
+	float: left;
+}
+.breadcrumbs ul {
+	width: 940px;		
+}
+.breadcrumbs li {
+	margin-right: 35px;	
+	padding-top: 23px;
+	padding-bottom: 23px;
+	font-size: 13px;
+	text-transform: uppercase;	
+	float: left;
+}
+.breadcrumbs a {
+	color: black;
+}
+.catalog-title-block {
+	width: 940px;	
+	background-color: #f2f6f8;
+	margin-bottom: 20px;
+}
+.catalog-title-block h2 {	
+	padding-left: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 30px;
+	font-weight: normal;
+	color: #32425c;
+	text-transform: uppercase;
+}
+.filter-block {
+	width: 220px;
+	float: left;
+}
+.main-items-block {
+	width: 700px;
+	float: right;
+}
+.filter-block-name {
+	background-color: #f7f3ec;
+}
+.filter-block-name h2 {	
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 13px;
+	color: black;
+	text-transform: uppercase;
+}
+.sorting {
+	width: 700px;
+	background-color: #f7f3ec;
+}
+.sorting-title {
+	float: left;
+}
+.sorting-title h2 {
+	padding-left: 20px;
+	margin-right: 140px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 13px;
+	color: black;
+	text-transform: uppercase;	
+}
+.sorting-block li {
+	float: left;
+	margin-right: 65px;	
+	font-size: 13px;
+	text-transform: uppercase;
+	color: black;
+	opacity: 0.3;
+	border-bottom: 1px dotted red;	
+}
+.sorting-block a {
+	color: black;
+}
+.sorting-item-active {
+	opacity: 1;
+	color: red;
+	border-bottom: 2px solid black;		
 }

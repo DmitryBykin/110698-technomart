@@ -12,11 +12,11 @@
 	<header class="header-catalog">
     <div class="container">
             
-      <div class="top-logo">
-        <a href="/">
-          Техномарт 
-        </a>
-      </div>
+     	<a href="/">
+				<div class="top-logo">
+					Техномарт     
+        </div>
+      </a>
             
       <div class="searching-block">
         <form class="searching-form" action="/search" method="post">          
@@ -46,10 +46,10 @@
     </div> <!-- end container -->
   </header>
     
-  <div class="top-page-block">
+  <div class="catalog-top-page">
     <div class="container">
             
-      <div class="top-block">
+      <div class="top-block clearfix">
         
         <div class="top-info-block">
           <h1 class="top-info-title"> 
@@ -79,43 +79,43 @@
                 
       </div> <!-- end top-block -->
             
-      <nav class="top-nav-block">
-        <ul class="top-nav-list">
-          <li class="top-nav-item"> 
+      <nav class="nav-block clearfix">
+        <ul class="nav-list">
+          <li class="nav-item"> 
             <a href="/">Главная</a> 
           </li>
-          <li class="top-nav-item"> 
+          <li class="nav-item"> 
             <a href="/">Компания</a>
           </li>
-          <li class="top-nav-item">
+          <li class="nav-item">
             <a href="/">Каталог</a>
           </li>
-          <li class="top-nav-item">
+          <li class="nav-item">
             <a href="/">Новости</a>
           </li>
-          <li class="top-nav-item">
+          <li class="nav-item">
             <a href="/">Спецпредложения</a>
           </li>
-          <li class="top-nav-item">
+          <li class="nav-item">
             <a href="/">Доставка</a>
           </li>
-          <li class="top-nav-item">
+          <li class="nav-item">
             <a href="/">Контакты</a> 
           </li>
         </ul>
       </nav>
             
     </div> <!-- end container -->
-  </div> <!-- end top-menu -->
+  </div> <!-- end catalog-top-page -->
   
   
   <main class="catalog-content">      <!-- Основной блок (все, что на белом фоне) -->
-    <div class="container">           
+    <div class="container clearfix">           
   
-      <div class="breadcrumbs">
+      <div class="breadcrumbs clearfix">
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
-              <a class="home" href="#"></a>
+              <a class="home" href="#">Home</a>
             </li>
             <li class="breadcrumbs-item">
               <a href="#">Каталог</a>
@@ -124,7 +124,7 @@
               <a href="#">Инструмент</a>
             </li>
             <li class="breadcrumbs-item">
-              Перфораторы
+							<a href="#">Перфораторы</a>
             </li>
           </ul>        
       </div> <!-- end breadcrumbs -->
@@ -204,16 +204,17 @@
       
       <section class="main-items-block">      <!-- Блок с блоком сортировки, блоком перфораторов и блоком кнопок для страниц -->
         
-          <div class="sorting">               <!-- Блок сортировки -->
+          <div class="sorting clearfix">               <!-- Блок сортировки -->
 
             <div class="sorting-title">       <!-- название -->
-              <h2>Сортировка</h2>
+              <h2>Сортировка:</h2>
             </div>
 
             <div class="sorting-block">       <!-- Блок с типами сортировки -->
               <ul class="sorting-list">
+								
                 <li class="sorting-item sorting-item-active">
-                  <a href="#">По цене</a>
+                  По цене
                 </li>
                 <li class="sorting-item">
                   <a href="#">По типу</a>
@@ -230,7 +231,7 @@
             </div>
           </div> <!-- end sorting -->
         
-        <div class="items-block">                   <!-- Блок с перфораторами -->
+        <div class="items-block clearfix">                   <!-- Блок с перфораторами -->
           <article class="products-item">            
             <figure>
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="112" alt="Перфоратор">
