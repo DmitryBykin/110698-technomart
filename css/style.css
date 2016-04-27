@@ -256,10 +256,11 @@ a {
 	text-transform: uppercase;
 }
 .services-title-description {
-  width: 370px;
+  width: 400px;
   height: 60px;
   padding-top: 25px;
   color: black;
+	font-family: 'PT Sans';
   font-size: 13px;  
 	line-height: 24px;		
 }
@@ -303,8 +304,9 @@ a {
 }
 .services-item-description {
   padding-top: 30px;
-  width: 250px;
+  width: 280px;
   height: 100px;
+	font-family: 'PT Sans';
   font-size: 13px;  
 	line-height: 24px;
 }
@@ -328,6 +330,7 @@ a {
 .about-company p,
 .map p {
 	margin-top: 25px;
+	font-family: 'PT Sans';
 	font-size: 13px;  
 	line-height: 24px;	
 }
@@ -590,6 +593,7 @@ a {
   text-transform: uppercase;
 }
 .about-product p {
+	font-family: 'PT Sans';
   font-size: 13px;  
   line-height: 24px;
   color: black;
