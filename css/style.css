@@ -47,6 +47,7 @@ h1,h2 {
 }
 a {
   text-decoration: none;  
+	color: white;
 }
 .container {
 	width: 940px;
@@ -96,7 +97,7 @@ a {
 .catalog-top-page {
 	background-color: #f1f5f7;
 	padding-bottom: 60px;
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 .top-block {
 	padding-top: 48px;
@@ -128,6 +129,7 @@ a {
 	width: 940px;
 	height: 60px;
 	background-color: #293449;	  
+	color: #ffffff;
 	//margin-bottom: 60px;
 }
 .nav-block ul {
@@ -135,7 +137,7 @@ a {
 	margin-top: 20px;  
 }
 .nav-block a {
-	color: #ffffff;
+	//color: #ffffff;
 }
 .nav-block li {
 	float: left;
@@ -296,7 +298,7 @@ a {
   text-transform: uppercase;
   color: #32425c;
 }
-.services-description {  
+.services-description p {  
   color: black;
 }
 .services-item-description {
@@ -368,8 +370,7 @@ a {
 	//margin-top: 87px;
 	background-color: #32425c;
 }
-.footer-top-nav,
-{
+.footer-top-nav {
 	width: 560px;
 	height: 47px;
 	float: right;
@@ -514,15 +515,15 @@ a {
 	padding-left: 20px;
 	margin-right: 140px;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 5px;	
 	font-size: 13px;
 	color: black;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 .sorting-block li { 
 	float: left;
 	margin-right: 75px;	
-    padding-top: 12px;
+  padding-top: 12px;
 	font-size: 13px;
 	text-transform: uppercase;
 	color: black;
