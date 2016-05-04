@@ -16,9 +16,9 @@
       </a>
             
       <div class="searching-block">
-        <form class="searching-form" action="/search" method="post">          
-          <a class="btn-search" type="submit"></a>                   
-          <input type="text" id="search" size="10" value="Поиск:">            
+        <form class="searching-form" action="search" method="post">          
+          <button class="btn-search" type="submit"></button>                   
+          <input type="text" id="search" size="20" value="Поиск:">            
         </form>
       </div> <!-- end searching-block -->
             
@@ -61,9 +61,10 @@
         </div> <!-- end contacts-block -->
                 
         <div class="top-user-block catalog">                        
-
-          <a class="user-field" href="#">Равшан Джамшутович</a>          
-          <a class="btn-logout" href="#"> </a>
+          <div class="user-field clearfix">          
+            <a class="profile" href="#">Равшан Джамшутович</a>
+            <a class="btn-logout"></a>
+          </div>
           <ul class="orders-personal-list clearfix">
             <li class="orders-personal-item">
               <a href="#">Мои заказы</a>
@@ -113,7 +114,7 @@
       <div class="breadcrumbs clearfix">
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
-              <a class="home" href="#">Home</a>
+              <a class="home" href="index.html"></a>
             </li>
             <li class="breadcrumbs-item">
               <a href="#">Каталог</a>
@@ -122,7 +123,7 @@
               <a href="#">Инструмент</a>
             </li>
             <li class="breadcrumbs-item">
-			  <a href="#">Перфораторы</a>
+			  <a>Перфораторы</a>
             </li>
           </ul>        
       </div> <!-- end breadcrumbs -->
@@ -141,7 +142,7 @@
           <h2>Цена:</h2>
         </div>
 
-        <form class="searching-form" action="/search" method="post">            <!-- начало формы с фильтрами -->
+        <form class="searching-form" action="search" method="post">            <!-- начало формы с фильтрами -->
             
           <div class="range-filter clearfix">
             <div class="range-controls">
@@ -155,31 +156,44 @@
             </div>
         </div>
           
-          
-    
         
         <div class="searching-by-manufacturer">
           <h2>Производители:</h2>          
           <ul>
             <li> 
-              <input type="checkbox" id="bosch" name="manufacturer" value="bosch" checked>
-              <label for="bosch">Bosch</label>
+              <label class="manufacturer-checkbox">
+                <input type="checkbox" id="bosch" name="manufacturer" value="bosch" checked>
+                <span class="checkbox-indicator"></span>
+                Bosch
+              </label>
+            </li>                          
+            <li> 
+              <label class="manufacturer-checkbox">
+                <input type="checkbox" id="interscol" name="manufacturer" value="interscol">
+                <span class="checkbox-indicator"></span>
+                Интерскол
+              </label>
             </li>
             <li> 
-              <input type="checkbox" id="interscol" name="manufacturer" value="interscol">
-              <label for="interscol">Интерскол</label>
+              <label class="manufacturer-checkbox">
+                <input type="checkbox" id="makita" name="manufacturer" value="makita" checked>
+                <span class="checkbox-indicator"></span>
+                Makita
+              </label>
             </li>
             <li> 
-              <input type="checkbox" id="makita" name="manufacturer" value="makita" checked>
-              <label for="makita">Makita</label>
+              <label class="manufacturer-checkbox">
+                <input type="checkbox" id="dewalt" name="manufacturer" value="dewalt">
+                <span class="checkbox-indicator"></span>
+                Dewalt
+              </label>
             </li>
             <li> 
-              <input type="checkbox" id="dewalt" name="manufacturer" value="dewalt">
-              <label for="dewalt">Dewalt</label>
-            </li>
-            <li> 
-              <input type="checkbox" id="hitachi" name="manufacturer" value="hitachi">
-              <label for="hitachi">Hitachi</label>
+              <label class="manufacturer-checkbox">
+                <input type="checkbox" id="hitachi" name="manufacturer" value="hitachi">
+                <span class="checkbox-indicator"></span>
+                Hitachi
+              </label>
             </li>              
           </ul>              
         </div> <!-- end searching-by-manufacturer -->
@@ -188,12 +202,18 @@
           <h2>Питание:</h2>
           <ul>
             <li>
-              <input type="radio" name="power" id="accumulator" value="accumulator" checked> 
-              <label for="accumulator">Аккумуляторные</label>
+              <label class="by-power-radio">
+                <input type="radio" name="power" id="accumulator" value="accumulator" checked> 
+                <span class="radio-indicator"></span>
+                 Аккумуляторные
+              </label>
             </li>                    
             <li>
-              <input type="radio" name="power" id="line-supply" value="line-supply"> 
-              <label for="line-supply">Сетевые</label>
+              <label class="by-power-radio">
+                <input type="radio" name="power" id="line-supply" value="line-supply"> 
+                <span class="radio-indicator"></span>
+                Сетевые
+              </label>
             </li>               
           </ul>
           <button class="btn-filtr" type="submit">Показать</button>                                
@@ -226,8 +246,8 @@
             </div>
 
             <div class="sorting-buttons-block">     <!-- Блок с треугольными кнопками -->
-              <button class="btn-up"></button>
-              <button class="btn-down"></button>            
+              <button class="btn-triangle btn-up"></button>
+              <button class="btn-triangle btn-down"></button>            
             </div>
           </div> <!-- end sorting -->
         
@@ -239,11 +259,10 @@
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->   <a href="#" class="btn-item btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-		 	  <a href="#">Перфоратор BOSCH<br>BFG3000</a>
+		 	  <a href="#">Перфоратор BOSCH BFG3000</a>
 		    </div>
             <div class="old-price">22500 р.</div>            
             <div class="price">15500 р.</div> 
@@ -254,11 +273,11 @@
               <img src="img/perf_BOSCH_BFG6000.jpg" width="144" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-			  <a href="#">Перфоратор BOSCH <br>BFG6000</a>
+			  <a href="#">Перфоратор BOSCH BFG6000</a>
 			</div>
             <div class="old-price">30500 р.</div>            
             <div class="price">25500 р.</div> 
@@ -267,14 +286,14 @@
           <article class="products-item">  
             <div class="products-item-new"></div>  <!-- надпись NEW -->
             <figure>
-              <img src="img/perf_BOSCH_BFG2000.jpg" width="144" height="89" alt="Перфоратор">
+              <img src="img/perf_BOSCH_BFG2000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-              <a href="#">Перфоратор BOSCH <br>BFG2000</a>
+              <a href="#">Перфоратор BOSCH BFG2000</a>
 		    </div>                        
             <div class="price">12500 р.</div> 
           </article> 
@@ -284,11 +303,11 @@
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-		 	  <a href="#">Перфоратор BOSCH<br>BFG3000</a>
+		 	  <a href="#">Перфоратор BOSCH BFG3000</a>
 		    </div>
             <div class="old-price">22500 р.</div>            
             <div class="price">15500 р.</div> 
@@ -300,11 +319,11 @@
               <img src="img/perf_BOSCH_BFG6000.jpg" width="144" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-			  <a href="#">Перфоратор BOSCH <br>BFG6000</a>
+			  <a href="#">Перфоратор BOSCH BFG6000</a>
 			</div>
             <div class="old-price">30500 р.</div>            
             <div class="price">25500 р.</div> 
@@ -313,14 +332,14 @@
           <article class="products-item">  
             
             <figure>
-              <img src="img/perf_BOSCH_BFG2000.jpg" width="144" height="89" alt="Перфоратор">
+              <img src="img/perf_BOSCH_BFG2000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-              <a href="#">Перфоратор BOSCH <br>BFG2000</a>
+              <a href="#">Перфоратор BOSCH BFG2000</a>
 		    </div>                        
             <div class="price">12500 р.</div> 
           </article> 
@@ -331,11 +350,11 @@
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-		 	  <a href="#">Перфоратор BOSCH<br>BFG3000</a>
+		 	  <a href="#">Перфоратор BOSCH BFG3000</a>
 		    </div>
             <div class="old-price">22500 р.</div>            
             <div class="price">15500 р.</div> 
@@ -346,11 +365,11 @@
               <img src="img/perf_BOSCH_BFG6000.jpg" width="144" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-			  <a href="#">Перфоратор BOSCH <br>BFG6000</a>
+			  <a href="#">Перфоратор BOSCH BFG6000</a>
 			</div>
             <div class="old-price">30500 р.</div>            
             <div class="price">25500 р.</div> 
@@ -358,14 +377,14 @@
           
           <article class="products-item">             
             <figure>
-              <img src="img/perf_BOSCH_BFG2000.jpg" width="144" height="89" alt="Перфоратор">
+              <img src="img/perf_BOSCH_BFG2000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-              <a href="#">Перфоратор BOSCH <br>BFG2000</a>
+              <a href="#">Перфоратор BOSCH BFG2000</a>
 		    </div>                        
             <div class="price">12500 р.</div> 
           </article> 
@@ -375,7 +394,7 @@
       
             <ul class="pagination-list clearfix"> <!-- Блок с кнопками для страниц -->
               <li class="paginator-item paginator-item-active"> 
-                1
+                <a>1</a>
               </li>
               <li class="paginator-item"> 
 				<a class="paginator-link" href="#">
@@ -503,5 +522,14 @@
 		  </div> <!-- end container -->
         </div> <!-- end footer-bottom-block -->
   </footer>
+  
+  <div class="modal-add-to-cart">
+    <button class="close-window" title="Закрыть"></button>
+    <p>Товар добавлен в корзину!</p>
+    <div class="btn-block">
+      <a class="btncom make-order" href="#">Оформить заказ</a>
+      <a class="btncom continue-purchase" href="#">Продолжить покупки</a>    
+    </div>
+  </div>
 </body>
 </html>

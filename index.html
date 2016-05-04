@@ -18,9 +18,9 @@
       
             
       <div class="searching-block">
-        <form class="searching-form" action="/search" method="post">          
-          <a class="btn-search" type="submit"></a>           
-          <input type="text" id="search" size="10" value="Поиск:">            
+        <form class="searching-form" action="search" method="post">          
+          <button class="btn-search" type="submit"></button>           
+          <input type="text" id="search" size="20" value="Поиск:">     
         </form>
       </div> <!-- end searching-block -->
             
@@ -52,7 +52,7 @@
         
         <div class="top-info-block">
           <h1 class="top-info-title"> 
-            Интернет-магазин строительных материалов и инструментов для ремонта 
+            Интернет-магазин строительных материалов и инструментов для ремонта             
           </h1>
         </div>
                 
@@ -90,7 +90,7 @@
           </li>
           <li class="nav-item">
             <a href="/">Контакты</a> 
-          </li>
+          </li>          
         </ul>
       </nav>
             
@@ -118,28 +118,59 @@
         
         <div class="products-slider-block clearfix">          
 			
-					<div class="products-slider">
-						<div class="slider-description">
-							Описание
-					 	</div>
+          			<div class="products-slider"> <!-- slide 1 -->
+                       <div class="slider-description">
+                         <h2> Перфораторы</h2>
+                         <p> Настоящие мужские игрушки</p>
+                       </div>
 						<img src="img/slide-1.jpg" width="620" height="266" alt="slider">
-						<a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
-					</div>
+						<a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
+                        <div class="btn-slider-block">
+                          <button class="btn-slider-prev"></button>
+                          <button class="btn-slider-next"></button>                          
+                       </div>  
+                      
+                       <div class="slider-radio-block">
+                         <label class="slider-radio-button">
+                           <input type="radio" id="slider1" name="slider1" value="slider1" checked >
+                           <span class="slider-radio-indicator"></span>                         
+                         </label>
+
+                         <label class="slider-radio-button">
+                           <input type="radio" id="slider2" name="slider1" value="slider2">
+                           <span class="slider-radio-indicator"></span>                         
+                         </label>
+                       </div>  
+                      
+					</div> <!-- end products-slider # 1-->
 					
-					<div class="products-slider">
+					<div class="products-slider not-active"> <!-- slide 2 -->                        
 						<div class="slider-description">
-							Описание
+							<h2>Дрели</h2>
+                            <p>Соседям на радость</p>
 					 	</div>
 						<img src="img/slide-2.jpg" width="620" height="266" alt="slider">
-						<a class="btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
-					</div>
-					
-					<div class="btn-slider-block">
-						<button class="btn-slider-prev"></button>
-						<button class="btn-slider-next"></button>
-					</div>
+						<a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
+                        <div class="btn-slider-block">
+                          <button class="btn-slider-prev"></button>
+                          <button class="btn-slider-next"></button>
+                        </div>
+                      
+                        <div class="slider-radio-block">
+                           <label class="slider-radio-button">
+                             <input type="radio" id="slider1" name="slider2" value="slider1" >
+                             <span class="slider-radio-indicator"></span>                         
+                           </label>
+
+                           <label class="slider-radio-button">
+                             <input type="radio" id="slider2" name="slider2" value="slider2" checked>
+                             <span class="slider-radio-indicator"></span>                         
+                           </label>
+                         </div>  
+					</div> <!-- end products-slider # 2 -->
           
-					<div class="nav-slider-block">
+					<!--
+                    <div class="nav-slider-block">
 						<ul class="nav-slider-list">
 							<li class="nav-slider-item">
 								<a href="#"></a>
@@ -149,7 +180,8 @@
 							</li>
 						</ul>
 					</div>                        
-         
+                    -->
+
         </div> <!-- end products-slider-block -->
         
         <article class="products products-discounts">
@@ -178,11 +210,11 @@
               <img src="img/perf_BOSCH_BFG9000.jpg" width="184" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a class="btn-item btn-buy" href="#">Купить</a>                <!-- кнопки появляются при наведении -->
+              <a class="btn-item btn-to-bookmarks" href="#">В закладки</a>
             </div>
             <div class="item-title">
-			  <a href="#">Перфоратор BOSH<br>BFG9000</a>
+			  <a href="#">Перфоратор BOSH BFG9000 проверка переполнения контента</a>
 			</div>
 			<div class="old-price">32500 р.</div>            
             <div class="price">25500 р.</div>     
@@ -193,11 +225,11 @@
               <img src="img/perf_BOSCH_BFG3000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-		 	  <a href="#">Перфоратор BOSCH<br>BFG3000</a>
+		 	  <a href="#">Перфоратор BOSCH BFG3000</a>
 		    </div>
             <div class="old-price">22500 р.</div>            
             <div class="price">15500 р.</div> 
@@ -208,11 +240,11 @@
               <img src="img/perf_BOSCH_BFG6000.jpg" width="144" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-			  <a href="#">Перфоратор BOSCH <br>BFG6000</a>
+			  <a href="#">Перфоратор BOSCH BFG6000</a>
 			</div>
             <div class="old-price">30500 р.</div>            
             <div class="price">25500 р.</div> 
@@ -221,14 +253,14 @@
           <article class="products-item">  
             <div class="products-item-new"></div>  <!-- надпись NEW -->
             <figure>
-              <img src="img/perf_BOSCH_BFG2000.jpg" width="144" height="89" alt="Перфоратор">
+              <img src="img/perf_BOSCH_BFG2000.jpg" width="127" height="89" alt="Перфоратор">
             </figure>
             <div class="item-btn-block">                   
-              <a href="#" class="btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
-              <a href="#" class="btn-to-bookmarks">В закладки</a>
+              <a href="#" class="btn-item btn-buy">Купить</a>                <!-- кнопки появляются при наведении -->         
+              <a href="#" class="btn-item btn-to-bookmarks">В закладки</a>
             </div>
             <div class="item-title">
-              <a href="#">Перфоратор BOSCH <br>BFG2000</a>
+              <a href="#">Перфоратор BOSCH BFG2000</a>
 		    </div>                        
             <div class="price">12500 р.</div> 
           </article> 
@@ -317,44 +349,50 @@
 				
         <div class="services-item-block clearfix">
 
-					<div class="nav-services-block">
-						<ul class="nav-services-list">
-							<li class="nav-services-item item-active">
-								<span>Доставка</span>
-							</li>
-							<li class="nav-services-item">
-								<a href="#">Гарантия</a>
-							</li>
-							<li class="nav-services-item">
-								<a href="#">Кредит</a>
-							</li>
-						</ul>
-				 	</div>
+	      <div class="nav-services-block">
+		    <ul class="nav-services-list">
+		      <li>
+		        <a class="nav-services-item" href="#">Доставка</a>
+		      </li>
+		      <li>
+				<a class="nav-services-item item-active">Гарантия</a>
+			  </li>
+		      <li>
+				<a class="nav-services-item" href="#">Кредит</a>
+			  </li>
+		    </ul>
+		  </div>
 
-				 <div class="services-description">
-					<div class="service-delivery">						
-						<h2 class="services-item-title">Доставка</h2>                                
-						<p class="services-item-description">
-						Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-						совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж.
-						</p>            
-					</div>
-            <!--  
-		      <div class="service-garanty">						
-			   <h2 class="services-item-title">Гарантия</h2>                                
-		       <p class="services-item-description">
-				 Все про гарантию
-		       </p>            
-		      </div>
+		  <div class="services-description">
+			<div class="service-delivery">						
+			  <h2 class="services-item-title">Доставка</h2>                                
+			  <p class="services-item-description">
+               Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+		       совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж.
+		      </p>            
+		    </div>
+             
+		      
+            <div class="services-block service-garanty">						
+		      <h2 class="services-item-title">Гарантия</h2>                                
+		      <p class="services-item-description">
+		        Если купленный у нас товар поломается или заискрит, 
+                а также в случае пожара, спровоцированного его возгаранием,  
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем 
+                сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+		      </p>            
+		    </div>
 
-		      <div class="service-credit">						
-			    <h2 class="services-item-title">Кредит</h2>                                
-				<p class="services-item-description">
-				 Все про кредит
-				</p>            
-		      </div>
-            -->
-			</div>	<!-- end services-description -->
+            <div class="services-block service-credit">						
+		      <h2 class="services-item-title">Кредит</h2>                                
+			  <p class="services-item-description">
+               Залезть в долговую яму стало проще! 
+               Кредитные консультанты придут вам на помощь.
+		      </p>            
+             <a class="btncom send-service-request" href="#">Отправить заявку</a>
+		    </div>
+            
+		  </div>	<!-- end services-description -->
 
         </div> <!-- end services-item-block -->
         
@@ -504,5 +542,44 @@
 					</div> <!-- end container -->
         </div> <!-- end footer-bottom-block -->
   </footer>
+  
+                                      <!--  Окно с формой обратной связи -->
+  
+    <div class="modal-feedback">                
+    <button class="close-window" title="Закрыть"></button>
+    <form class="feedback-form" action="feedback" method="post">
+      <div class="form-block">
+        
+        <div class="label-text-field">
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" id="user-name" name="user-name" value=" Представьтесь, пожалуйста" size=29>
+        </div>
+        
+        <div class="label-text-field">
+          <label for="e-mail">Ваш e-mail:</label>
+          <input type="text" id="e-mail" name="e-mail" value=" Для отправки ответа" size=29>
+        </div>  
+        
+          <label for="letter-content">Текст письма:</label>
+          <textarea id="letter-content" cols="62" rows="5"> Текст письма в свободной форме
+          </textarea>
+        
+      </div>
+      <div class="button-block">
+        <button class="btncom send-request-btn" type="submit">Отправить</button>    
+      </div>      
+    </form>    
+  </div>
+  
+                                            <!--  Карта 940x447 -->
+  <div class="modal-map">             
+    <button class="close-window" title="Закрыть"></button>
+    <figure>
+      <img src="img/map_940x446.jpg" alt="Схема проезда" width="940" height="446">
+    </figure>
+    
+  </div>
+  
+  
 </body>
 </html>
