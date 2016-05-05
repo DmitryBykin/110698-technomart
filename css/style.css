@@ -145,9 +145,7 @@ button:focus {
     width: 270px;
    
     font-size: 17px;
-    line-height: 18px;  
-	
-    //background-color: antiquewhite;  
+    line-height: 18px;     
 }
 .btn-search {      
   position: absolute;  
@@ -185,10 +183,27 @@ button:focus {
   background: url("../img/sprites.png") no-repeat -54px 0;
 }
 .searching-form input[type="text"]:focus {
-  background-color: white;
+  background-color: white; 
   color: black;
 }
-
+/************************************ placeholder *****************************/
+.searching-form input[type="text"]::-webkit-input-placeholder {
+  color: white; 
+  opacity: 1;
+} 
+.searching-form input[type="text"]::-moz-placeholder {
+  color: white; 
+  opacity: 1;
+}          
+.searching-form input[type="text"]:-moz-placeholder {
+  color: white; 
+  opacity: 1;
+}           
+.searching-form input[type="text"]:-ms-input-placeholder {
+  color: white; 
+  opacity: 1;
+}
+/********************* end стили для placeholder ***********************************************/
 .bookmarks-block a {
   position: relative;
   width: 100px;
@@ -1856,6 +1871,43 @@ selector{
 .form-block textarea {
   resize: none;
 }
+/****************************** placeholder для обратной связи ************************/
+.form-block input[type="text"]::-webkit-input-placeholder,
+.form-block textarea::-webkit-input-placeholder {  
+  color: black;
+} 
+.form-block input[type="text"]::-moz-placeholder,
+.form-block textarea::-moz-placeholder {  
+  color: black;  
+}          
+.form-block input[type="text"]:-moz-placeholder,
+.form-block textarea:-moz-placeholder {
+  color: black;
+}           
+.form-block input[type="text"]:-ms-input-placeholder,
+.form-block textarea:-ms-input-placeholder {
+  color: black;
+}
+
+.form-block input[type="text"]:focus::-webkit-input-placeholder,        /* поля очищаются */
+.form-block textarea:focus::-webkit-input-placeholder {  
+  color: transparent;  
+}          
+.form-block input[type="text"]:focus::-moz-placeholder,        /* поля очищаются */
+.form-block textarea:focus::-moz-placeholder {  
+  color: transparent;  
+}          
+
+.form-block input[type="text"]:focus:-moz-placeholder,        /* поля очищаются */
+.form-block textarea:focus:-moz-placeholder {  
+  color: transparent;  
+}          
+
+.form-block input[type="text"]:focus:-ms-input-placeholder,        /* поля очищаются */
+.form-block textarea:focus:-ms-input-placeholder {  
+  color: transparent;  
+}          
+
 /**************************** Карта ******************************/
 .modal-map {
   position: relative;
