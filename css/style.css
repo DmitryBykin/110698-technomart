@@ -1679,19 +1679,20 @@ selector{
 }
 
 /************************** Окно Товар добавлен в корзину ******************************/
+.show-modal-add-to-cart {
+  display: block;
+}
 .modal-add-to-cart { 
-  position: relative;
-  margin: 150px auto;
-/*
   display: none;
-  position: fixed;    
+  position: fixed;      
+   
   margin: auto;
   
   top: 0;          
   left: 0;
   bottom: 0;
   right: 0;
-*/  
+
   width: 620px;
   height: 276px;
   
@@ -1782,18 +1783,17 @@ selector{
 }
 
 /**************************** Форма обратной связи *******************************************/
+
 .modal-feedback {
-  position: relative;
-  margin: 150px auto;
-/*  
-  display: none;  
+  display: none;
   position: fixed;
+
   margin: auto;
   
   bottom: 100px;
   left: 0;  
   right: 0;
-*/  
+
   width: 620px;
   height: 420px;
   
@@ -1801,6 +1801,9 @@ selector{
   box-shadow: 0 10px 35px -10px black;  
   
   background-color: white;
+}
+.show-modal-feedback {
+  display: block;
 }
 .send-request-btn {
   width: 460px;
@@ -1893,37 +1896,38 @@ selector{
 .form-block textarea:focus::-webkit-input-placeholder {  
   color: transparent;  
 }          
-.form-block input[type="text"]:focus::-moz-placeholder,        /* поля очищаются */
+.form-block input[type="text"]:focus::-moz-placeholder,                 /* поля очищаются */
 .form-block textarea:focus::-moz-placeholder {  
   color: transparent;  
 }          
 
-.form-block input[type="text"]:focus:-moz-placeholder,        /* поля очищаются */
+.form-block input[type="text"]:focus:-moz-placeholder,                  /* поля очищаются */
 .form-block textarea:focus:-moz-placeholder {  
   color: transparent;  
 }          
 
-.form-block input[type="text"]:focus:-ms-input-placeholder,        /* поля очищаются */
+.form-block input[type="text"]:focus:-ms-input-placeholder,             /* поля очищаются */
 .form-block textarea:focus:-ms-input-placeholder {  
   color: transparent;  
 }          
 
 /**************************** Карта ******************************/
+
 .modal-map {
-  position: relative;
-  margin: 150px auto;
-/*
   display: none;  
   position: fixed;  
+  
   margin: auto;       
-
 
   bottom: 100px;
   left: 0;
   right: 0;
-*/
+
   width: 940px;
   height: 446px;
   
   box-shadow: 0 10px 35px -10px black;    
+}
+.show-modal-map {
+  display: block;
 }

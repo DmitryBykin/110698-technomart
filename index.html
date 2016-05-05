@@ -433,7 +433,7 @@
           Вы можете забрать товар сами, <br> заехав в наш офис:          
         </p>
         <figure>
-          <a href="#">                                            <!-- по спецификации переход к сервису карт -->
+          <a class="show-map" href="#">                            <!-- по спецификации переход к сервису карт -->
             <img src="img/map.jpg" width="300" height="158" alt="Схема проезда">
           </a>
         </figure>
@@ -542,7 +542,7 @@
   
                                       <!--  Окно с формой обратной связи -->
   
-    <div class="modal-feedback">                
+  <div class="modal-feedback">                
 			<button class="close-window" title="Закрыть"></button>
 			<form class="feedback-form" action="feedback" method="post">
 				<div class="form-block">
@@ -584,6 +584,27 @@
     
   </div>
   
-  
+  <script>
+    var modalFeedback = document.querySelector(".modal-feedback");
+    var btnWriteUs = document.querySelector(".map .btn-write-us");
+    var btnCloseWindowFeedback = modalFeedback.querySelector(".close-window");
+    
+    var modalMap = document.querySelector(".modal-map");
+    var btnShowMap = document.querySelector(".map .btn-write-us");
+    
+    btnWriteUs.addEventListener("click", function(event){
+      event.preventDefault();
+      modalFeedback.classList.add("show-modal-feedback");
+    });
+    
+    btnCloseWindowFeedback.addEventListener("click", function(event){
+      event.preventDefault();
+      if(modalFeedback.classList.contains("show-modal-feedback"))
+        modalFeedback.classList.remove("show-modal-feedback");
+    });
+    
+    
+    
+  </script>
 </body>
 </html>
