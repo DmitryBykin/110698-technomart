@@ -136,6 +136,7 @@ img {
 	padding-bottom: 20px; 
 	border-bottom: 5px solid #b52933;	
 }
+<<<<<<< HEAD
 .searching-block {
 	//width: 235px;	
     width: 270px;
@@ -153,15 +154,49 @@ img {
   
   margin-left: 15px;
   margin-right: 13px;  
+=======
+.searching-form {	
+	float: left;	
+	
+  width: 270px;
+>>>>>>> origin/master
   
+	font-size: 17px;
+  line-height: 18px;  
+}
+.btn-search {
+	display: none;
+}
+
+.searching-form input[type="text"] {  
+	position: relative;	
+	
+	padding: 12px 60px 12px 50px;
+	
+  border: 0;
+	outline: 0;
+	
+  background-color: #293449;
+  color: white;
+}
+.searching-form input[type="text"] + .btn-search {     /* Кнопка */ 
+  position: absolute;  
+  content: "";
+	
   width: 16px;
   height: 16px;
   
+	top: 14px;
+	left: 20px; 
+	
   border: 0;
+	outline: 0;
+	
   background: url("../img/sprites.png") no-repeat 0 0;
   
   opacity: 0.3;
 }
+<<<<<<< HEAD
 .searching-block input[type="text"] {
   display: inline-block;
   vertical-align: middle;
@@ -172,13 +207,17 @@ img {
   color: white;
 }
 .searching-block:hover .btn-search {
+=======
+
+.searching-form .input-field:hover::before {
+>>>>>>> origin/master
   opacity: 1;
   cursor: pointer;
 }
-.searching-block:focus .btn-search {
+.searching-form input[type="text"]:focus::before {
   background: url("../img/sprites.png") no-repeat -54px 0;
 }
-.searching-block input[type="text"]:focus {
+.searching-form input[type="text"]:focus {
   background-color: white;
   color: black;
 }
@@ -187,17 +226,17 @@ img {
   color: black;
 }
 .bookmarks-block a {
-    position: relative;
+  position: relative;
 	width: 100px;
 	float: left;
-    padding-top: 12px;
-    padding-bottom: 12px;	    
-    //padding-right: 30px;
-    padding-left: 50px;
-    //margin-right: 20px;
-    font-size: 17px;
-    line-height: 18px;  	    	
-    background-color: #293449;	  
+  padding-top: 12px;
+  padding-bottom: 12px;	    
+  //padding-right: 30px;
+  padding-left: 50px;
+  //margin-right: 20px;
+  font-size: 17px;
+  line-height: 18px;  	    	
+  background-color: #293449;	  
 }
 .bookmarks-block a::before {  
   position: absolute;
@@ -1764,7 +1803,7 @@ selector{
   position: relative;
   margin: 150px auto;
 /*  
-  display: block;  
+  display: none;  
   position: fixed;
   margin: auto;
   
@@ -1773,7 +1812,7 @@ selector{
   right: 0;
 */  
   width: 620px;
-  height: 424px;
+  height: 420px;
   
   border-top: 7px solid #ee3643;    
   box-shadow: 0 10px 35px -10px black;  
@@ -1792,15 +1831,16 @@ selector{
   cursor: pointer;
 }
 .button-block {
-  padding-top: 37px;
-  padding-bottom: 37px;
+  padding-top: 38px;
+  padding-bottom: 38px;
   
-  background-color: #f1f1f1;
+  
+	background-color: #f1f1f1;
 }
 .form-block {
   width: 460px;
   
-  margin: 25px auto 41px;    
+  margin: 25px auto 35px;    
 }
 .form-block label {
   display: block;
@@ -1816,6 +1856,8 @@ selector{
 .form-block textarea {
   min-height: 34px;
 
+	padding-left: 10px;
+		
   font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1825,15 +1867,27 @@ selector{
   
   color: #999999;
 }
-
-.label-text-field {
-  display: inline-block;
-  vertical-align: top;  
+.form-block input[type="text"] {
+	width: 206px;
 }
-.label-text-field:first-of-type { /* правый отступ для первого поля*/
-  margin-right: 23px;
+.form-block textarea {	
+	width: 446px;
+	height: 100px;
+	
+	padding-top: 10px;	
 }
-
+.wrapper {	
+	width: 100%;	
+}
+.label-name-field {
+	float: left;
+}
+.label-mail-field {
+	float: right;	
+}
+.form-block textarea {
+  resize: none;
+}
 /**************************** Карта ******************************/
 .modal-map {
   position: relative;
