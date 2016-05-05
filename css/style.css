@@ -145,7 +145,7 @@ img {
     font-size: 17px;
     line-height: 18px;  
 	float: left;
-    //background-color: antiquewhite;
+    //background-color: antiquewhite;  
 }
 .btn-search {    
   display: inline-block;
@@ -165,7 +165,9 @@ img {
 .searching-block input[type="text"] {
   display: inline-block;
   vertical-align: middle;
+    
   border: 0;
+  
   background-color: #293449;
   color: white;
 }
@@ -180,7 +182,10 @@ img {
   background-color: white;
   color: black;
 }
-
+.searching-block:focus {
+  background-color: red;
+  color: black;
+}
 .bookmarks-block a {
     position: relative;
 	width: 100px;
@@ -1715,7 +1720,7 @@ selector{
   
   background-color: white; 
 }
-.modal-add-ro-cart p::before {
+.modal-add-to-cart p::before {
   position: absolute;
   content: "";  
   
@@ -1783,6 +1788,8 @@ selector{
   padding-bottom: 10px;
   
   border: 0;
+  
+  cursor: pointer;
 }
 .button-block {
   padding-top: 37px;
