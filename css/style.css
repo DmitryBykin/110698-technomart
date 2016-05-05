@@ -37,32 +37,28 @@
 }
 /********************************************************/
 body {
-	font-size: 17px;
-	line-height: 17px;
-	color: #ffffff;
-	font-weight: normal;	
-	font-family: Cuprum, Tahoma, sans-serif;
+  font-family: Cuprum, Tahoma, sans-serif;
+  
+  font-size: 17px;
+  line-height: 17px;  
+  font-weight: normal;	
+  
+  color: #ffffff;
 }
-/*
-h1 {
-	font-size: 16px;
-	line-height: 23px;
-	color: #ee3643;	
-	font-weight: normal;
-	font-family: "Cuprum";
-}*/
 h2 {
-	font-size: 24px;
-	line-height: 30px;
-	color: #ffffff;
-	font-weight: normal;
-	font-family: "Cuprum", Tahoma, sans-serif;
+  font-family: "Cuprum", Tahoma, sans-serif;
+  
+  font-size: 24px;
+  line-height: 30px;  
+  font-weight: normal;
+  
+  color: #ffffff;
 }
 
 .clearfix {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 ul {
   list-style: none;  /* убираем у всех списков точки и пробелы */
@@ -86,6 +82,12 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+button,
+button:active,
+button:focus {
+  outline: none;
+  border: none; 
 }
 .container {
 	width: 940px;
@@ -136,103 +138,65 @@ img {
 	padding-bottom: 20px; 
 	border-bottom: 5px solid #b52933;	
 }
-<<<<<<< HEAD
-.searching-block {
-	//width: 235px;	
+
+.searching-form {	
+    position: relative;
+    float: left;
     width: 270px;
-    //min-height: 42px;
-    padding-top: 11px;
-    padding-bottom: 11px;    
+   
     font-size: 17px;
     line-height: 18px;  
-	float: left;
+	
     //background-color: antiquewhite;  
 }
-.btn-search {    
-  display: inline-block;
-  vertical-align: middle;  
-  
-  margin-left: 15px;
-  margin-right: 13px;  
-=======
-.searching-form {	
-	float: left;	
-	
-  width: 270px;
->>>>>>> origin/master
-  
-	font-size: 17px;
-  line-height: 18px;  
-}
-.btn-search {
-	display: none;
-}
-
-.searching-form input[type="text"] {  
-	position: relative;	
-	
-	padding: 12px 60px 12px 50px;
-	
-  border: 0;
-	outline: 0;
-	
-  background-color: #293449;
-  color: white;
-}
-.searching-form input[type="text"] + .btn-search {     /* Кнопка */ 
+.btn-search {      
   position: absolute;  
   content: "";
 	
   width: 16px;
   height: 16px;
-  
-	top: 14px;
-	left: 20px; 
-	
+
+  top: 14px;
+  left: 18px; 
+
   border: 0;
-	outline: 0;
+  outline: 0;
 	
   background: url("../img/sprites.png") no-repeat 0 0;
   
   opacity: 0.3;
+  cursor: pointer;
 }
-<<<<<<< HEAD
-.searching-block input[type="text"] {
-  display: inline-block;
-  vertical-align: middle;
-    
+
+.searching-form input[type="text"] {  
+  padding: 12px 60px 12px 50px;
+	
   border: 0;
-  
+  outline: 0;
+	
   background-color: #293449;
   color: white;
 }
-.searching-block:hover .btn-search {
-=======
 
-.searching-form .input-field:hover::before {
->>>>>>> origin/master
-  opacity: 1;
-  cursor: pointer;
+.searching-form:hover .btn-search {
+  opacity: 1;  
 }
-.searching-form input[type="text"]:focus::before {
+.searching-form input[type="text"]:focus + .btn-search {
   background: url("../img/sprites.png") no-repeat -54px 0;
 }
 .searching-form input[type="text"]:focus {
   background-color: white;
   color: black;
 }
-.searching-block:focus {
-  background-color: red;
-  color: black;
-}
+
 .bookmarks-block a {
   position: relative;
-	width: 100px;
-	float: left;
+  width: 100px;
+  float: left;
   padding-top: 12px;
   padding-bottom: 12px;	    
-  //padding-right: 30px;
-  padding-left: 50px;
+  padding-right: 5px;
+  padding-left: 45px;
   //margin-right: 20px;
   font-size: 17px;
   line-height: 18px;  	    	
@@ -322,13 +286,13 @@ img {
 	width: 200px;
 	min-height: 65px;	
 	float: left;
-	margin-right: 30px;
+	margin-right: 60px;
 	margin-left: 50px;
     font-size: 16px;
     line-height: 23px;
     font-weight: normal;
     font-style: italic;
-    color: #ee3643;  
+    color: #ee3643;    
  }
 .top-contacts-block {
   width: 272px;
@@ -555,28 +519,32 @@ img {
 .not-active {
   display: none;
 }
+
 .btn-slider-prev {  
   position: absolute;
+  
   width: 21px;
   height: 40px;
+  
   left: 28px;
   top: 116px;
   
-  background: url("../img/sprites.png") no-repeat -68px -119px;
-  border: 0;  
-  cursor: pointer;
+  background: url("../img/sprites.png") no-repeat -68px -119px;   
+  cursor: pointer;  
 }
 .btn-slider-next {  
   position: absolute;
+  
   width: 21px;
   height: 40px;
+  
   left: 578px;
   top: 116px;
   
-  background: url("../img/sprites.png") no-repeat -100px -119px;
-  border: 0;
+  background: url("../img/sprites.png") no-repeat -100px -119px;  
   cursor: pointer;
 }
+
 .btn-open-catalog {
   position: absolute;  
   left: 25px;
