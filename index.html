@@ -17,12 +17,13 @@
         </span>
       
             
-      <div class="searching-block">
-        <form class="searching-form" action="search" method="post">          
-          <button class="btn-search" type="submit"></button>           
-          <input type="text" id="search" size="20" value="Поиск:">     
+     <!-- <div class="searching-block"> -->
+				<form class="searching-form" action="search" method="post">          
+          <!--<button class="btn-search" type="submit"></button>           -->
+          <input class="input-field" type="text" id="search" size="20" value="Поиск:">     
+					<span class="btn-search"></span>
         </form>
-      </div> <!-- end searching-block -->
+      <!--</div>--> <!-- end searching-block -->
             
       <div class="bookmarks-block">
         <a href="bookmarks.html">        
@@ -546,29 +547,36 @@
                                       <!--  Окно с формой обратной связи -->
   
     <div class="modal-feedback">                
-    <button class="close-window" title="Закрыть"></button>
-    <form class="feedback-form" action="feedback" method="post">
-      <div class="form-block">
-        
-        <div class="label-text-field">
-          <label for="user-name">Ваше имя:</label>
-          <input type="text" id="user-name" name="user-name" value=" Представьтесь, пожалуйста" size=29>
-        </div>
-        
-        <div class="label-text-field">
-          <label for="e-mail">Ваш e-mail:</label>
-          <input type="text" id="e-mail" name="e-mail" value=" Для отправки ответа" size=29>
-        </div>  
-        
-          <label for="letter-content">Текст письма:</label>
-          <textarea id="letter-content" cols="62" rows="5"> Текст письма в свободной форме
-          </textarea>
-        
-      </div>
-      <div class="button-block">
-        <button class="btncom send-request-btn" type="submit">Отправить</button>    
-      </div>      
-    </form>    
+			<button class="close-window" title="Закрыть"></button>
+			<form class="feedback-form" action="feedback" method="post">
+				<div class="form-block">
+
+					<div class="wrapper clearfix">
+
+						<div class="label-name-field">
+							<label for="user-name">Ваше имя:</label>
+							<input type="text" id="user-name" name="user-name" value="Представьтесь, пожалуйста">
+						</div>
+
+
+						<div class="label-mail-field">
+							<label for="e-mail">Ваш e-mail:</label>
+							<input type="text" id="e-mail" name="e-mail" value="Для отправки ответа">
+						</div>  
+
+					</div> <!-- end wrapper -->
+
+					<label for="letter-content">Текст письма:</label>
+					<textarea id="letter-content" cols="61" rows="5">В свободной форме
+					</textarea>
+
+				</div>
+
+				<div class="button-block">
+					<button class="btncom send-request-btn" type="submit">Отправить</button>    
+				</div>      
+
+			</form>    			
   </div>
   
                                             <!--  Карта 940x447 -->
