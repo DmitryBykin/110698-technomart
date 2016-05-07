@@ -519,7 +519,8 @@ button:focus {
 }
 
 /***************************** Слайдер ******************************/
-.products-slider-block {    
+.slider {   
+  position: relative;
   float: left;    	  
   
   width: 620px;
@@ -527,12 +528,6 @@ button:focus {
   
   margin-right: 20px;
   margin-top: 20px;   
-}
-.products-slider {
-  position: relative;
-}
-.not-active {
-  display: none;
 }
 
 .btn-slider-prev {  
@@ -545,7 +540,7 @@ button:focus {
   top: 116px;
   
   background: url("../img/sprites.png") no-repeat -68px -119px;   
-  cursor: pointer;  
+  cursor: pointer;    
 }
 .btn-slider-next {  
   position: absolute;
@@ -557,7 +552,7 @@ button:focus {
   top: 116px;
   
   background: url("../img/sprites.png") no-repeat -100px -119px;  
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .btn-open-catalog {
@@ -591,50 +586,72 @@ button:focus {
   
   color: white;  
 }
-/*************************** radio button slider ********************/
 
-.slider-radio-block {
-  position: absolute; 
-  width: 100px;
+.slide {  
+    position:absolute;
   
-  bottom: 35px;
-  left: 50%;            /* центрируем кнопки по центру */
-  right: 0;        
+    top: 0;
+    left: 0;
   
-  margin-left: -20px; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
 }
-.slider-radio-button {
-  position: relative;
-  
-  padding-right: 25px;  
-  
-  cursor: pointer;  
+
+
+.slide:nth-child(1){
+  background: url("../img/slide-1.jpg") no-repeat 0 0;
 }
-.slider-radio-button input[type="radio"] {    
-  display: none;  
+.slide:nth-child(2){
+  background: url("../img/slide-2.jpg") no-repeat 0 0;
 }
-.slider-radio-button input[type="radio"] + .slider-radio-indicator {
-  position: absolute; 
-  
-  width: 10px;
-  height: 10px;
-  
-  top: 0;
-  left: 0;
-  
-  background: url("../img/sprites.png") no-repeat -122px -163px;
+
+
+.slider input[type=radio] {
+    position:absolute;
+    opacity:0;
 }
-.slider-radio-button input[type="radio"]:checked + .slider-radio-indicator {
-  position: absolute;  
+.slider-controls{
+    position:absolute;
   
-  width: 10px;
-  height: 10px;
+    bottom:35px;  
+    left:50%;
   
-  top: 0;
-  left: 0;
+    width:200px;
+    height:10px;
   
-  background: url("../img/sprites.png") no-repeat -97px -163px;
+    margin-left:-100px;
+    text-align:center;
+  
+    z-index: 1;
 }
+.slider-controls label{
+    display:inline-block;
+    vertical-align:top;
+  
+    width: 6px;
+    height: 6px;
+  
+    margin: 0 3px;
+    background:white;
+    border:3px solid white;    
+    border-radius:50%;
+  
+    cursor:pointer;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+    background: #ee3643;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) { 
+    display: block; 
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) { 
+    display: block;  
+}
+
 
 /****************************** Карточка товара *********************/
 .products-item {            
@@ -679,11 +696,12 @@ button:focus {
   text-decoration: line-through;
 }
 .price {
-  width: 88px; 
-  
+  width: 88px;   
   position: absolute;            /* блок с ценой прижат к нижней части article    */
+  
   bottom: 20px;
   left: 42px;
+  
   padding-left: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -691,19 +709,25 @@ button:focus {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
-  color: white;  
   text-transform: uppercase;
-  background-color: #ee3643;
+    
   border-radius: 2px 0 0 2px;
+  background-color: #ee3643;  
+  
+  color: white;  
 }
 .price::after {      /* красный квадрат -> стрелочка с ценой  */
-  content: "";
   position: absolute;
+  content: "";
+  
   margin-right: -14px;
+  
   bottom: 6px;
   right: 0;
+  
   width: 27px;
   height: 27px;
+  
   transform: rotate(45deg);
   background-color: #ee3643;
 }
@@ -718,6 +742,7 @@ button:focus {
 }
 .products-item-new {
   position: absolute;
+  
   width: 60px;
   height: 59px;
   
@@ -854,6 +879,8 @@ button:focus {
 .manufacturers-items {	
 	margin-bottom: 70px;
 }
+
+
 .services {
 	background-color: #f2f6f8;
 }
@@ -892,7 +919,7 @@ button:focus {
   width: 10px;
   height: 272px;
   
-  top: -40px;
+  top: -45px;
   right: 0;
   
   background-image: url("../img/shadow-items.png");
@@ -903,18 +930,15 @@ button:focus {
   width: 625px;
   height: 285px;   
 }
-.service-delivery {    
-  height: 100%;
-  display: none;
+.services-block:nth-child(1) {    
+  height: 100%; 
   background: url("../img/services-delivery.png") right bottom no-repeat;
 }
-.service-garanty {
-  //display: none;
+.services-block:nth-child(2) {
   height: 100%;
   background: url("../img/services-guarantee.png") right bottom no-repeat;
 }
-.service-credit {
-  display: none;
+.services-block:nth-child(3) {
   height: 100%;
   background: url("../img/services-credit.png") right bottom no-repeat;
 }
@@ -924,8 +948,7 @@ button:focus {
   
   margin-top: 30px;
 }
-
-.nav-services-item {              /* Ссылка */
+.nav-services-item {              /* label */
   display: block;
   
   padding-top: 20px;
@@ -938,11 +961,7 @@ button:focus {
   background-color: #32425c;
   border-bottom: 1px solid #293449;
   color: white;
-}
-.item-active {       /* Активный пункт раздела Сервисы */ 
-  background-color: white;
-  border-bottom: 1px solid #293449;  
-  color: #32425c;
+  cursor: pointer;
 }
 .nav-services-item:hover {
   background-color: #293449;
@@ -973,6 +992,32 @@ button:focus {
 .services-content-block {
 	margin-bottom: 80px;  
 }
+
+.services-item-block input[type=radio] {
+  display: none;
+}
+
+#nav-1:checked ~ .nav-services-block label[for="nav-1"],
+#nav-2:checked ~ .nav-services-block label[for="nav-2"],
+#nav-3:checked ~ .nav-services-block label[for="nav-3"] {
+  background-color: white;  
+  border-bottom: 1px solid white;  
+  color: #32425c;
+  cursor: default;
+}
+.services-block {
+  display: none;
+}
+#nav-1:checked ~ .services-description .services-block:nth-child(1){
+  display: block;
+}
+#nav-2:checked ~ .services-description .services-block:nth-child(2){
+  display: block;
+}
+#nav-3:checked ~ .services-description .services-block:nth-child(3){
+  display: block;
+}
+
 .about-company {
   width: 522px;  
   float: left; 
@@ -1679,9 +1724,6 @@ selector{
 }
 
 /************************** Окно Товар добавлен в корзину ******************************/
-.show-modal-add-to-cart {
-  display: block;
-}
 .modal-add-to-cart { 
   display: none;
   position: fixed;      
@@ -1698,6 +1740,12 @@ selector{
   
   border-top: 7px solid #ee3643;    
   box-shadow: 0 10px 35px -10px black;
+  z-index: 2;
+}
+.show-modal-add-to-cart {
+  display: block;
+  animation-name: popup;
+  animation-duration: 0.6s;
 }
 .close-window {
   position: absolute;
@@ -1712,6 +1760,7 @@ selector{
   outline: 0;
   background: none;
   cursor: pointer;    
+	/*z-index: 10;*/
 }
 .close-window::before,
 .close-window::after {
@@ -1801,9 +1850,12 @@ selector{
   box-shadow: 0 10px 35px -10px black;  
   
   background-color: white;
+  z-index: 2;
 }
 .show-modal-feedback {
   display: block;
+  animation-name: popup;
+  animation-duration: 0.6s;
 }
 .send-request-btn {
   width: 460px;
@@ -1927,7 +1979,43 @@ selector{
   height: 446px;
   
   box-shadow: 0 10px 35px -10px black;    
+  z-index: 2;
 }
 .show-modal-map {
   display: block;
+  animation: popup;
+  animation-duration: 0.6s;
+}
+.modal-map .close-window {             /* выносим крестик, чтобы не перекрывал карту */
+  position: absolute;
+  
+  top: 0;  
+  right: -20px;
+}
+/********************************** Анимации ***********************************/
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
 }

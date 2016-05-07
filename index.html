@@ -113,73 +113,47 @@
           <a class="btn btn-technics" href="#">Для стройки</a>
         </article> 
         
-        <div class="products-slider-block clearfix">          
-			
-          			<div class="products-slider"> <!-- slide 1 -->
-                       <div class="slider-description">
-                         <h2> Перфораторы</h2>
-                         <p> Настоящие мужские игрушки</p>
-                       </div>
-						<img src="img/slide-1.jpg" width="620" height="266" alt="slider">
-						<a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
-                        <div class="btn-slider-block">
-                          <button class="btn-slider-prev"></button>
-                          <button class="btn-slider-next"></button>                          
-                       </div>  
-                      
-                       <div class="slider-radio-block">
-                         <label class="slider-radio-button">
-                           <input type="radio" id="slider1" name="slider1" value="slider1" checked >
-                           <span class="slider-radio-indicator"></span>                         
-                         </label>
-
-                         <label class="slider-radio-button">
-                           <input type="radio" id="slider2" name="slider1" value="slider2">
-                           <span class="slider-radio-indicator"></span>                         
-                         </label>
-                       </div>  
-                      
-					</div> <!-- end products-slider # 1-->
-					
-					<div class="products-slider not-active"> <!-- slide 2 -->                        
-						<div class="slider-description">
-							<h2>Дрели</h2>
-                            <p>Соседям на радость</p>
-					 	</div>
-						<img src="img/slide-2.jpg" width="620" height="266" alt="slider">
-						<a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
-                        <div class="btn-slider-block">
-                          <button class="btn-slider-prev"></button>
-                          <button class="btn-slider-next"></button>
-                        </div>
-                      
-                        <div class="slider-radio-block">
-                           <label class="slider-radio-button">
-                             <input type="radio" id="slider1" name="slider2" value="slider1" >
-                             <span class="slider-radio-indicator"></span>                         
-                           </label>
-
-                           <label class="slider-radio-button">
-                             <input type="radio" id="slider2" name="slider2" value="slider2" checked>
-                             <span class="slider-radio-indicator"></span>                         
-                           </label>
-                         </div>  
-					</div> <!-- end products-slider # 2 -->
+        <div class="slider clearfix">          
+                          
+          <!--<button class="btn-slider-prev"></button>
+          <button class="btn-slider-next"></button>-->
+         
+               
+          <input type="radio" id="btn-1" name="toggle" checked >
+          <input type="radio" id="btn-2" name="toggle">
+                                    
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>                          
+          </div>
           
-					<!--
-                    <div class="nav-slider-block">
-						<ul class="nav-slider-list">
-							<li class="nav-slider-item">
-								<a href="#"></a>
-							</li>
-							<li class="nav-slider-item">
-								<a href="#"></a>
-							</li>
-						</ul>
-					</div>                        
-                    -->
-
-        </div> <!-- end products-slider-block -->
+          <div class="slides">
+          
+            <div class="slide">
+              <div class="slider-description">
+                <h2> Перфораторы</h2>
+                <p> Настоящие мужские игрушки</p>
+              </div>
+              <!--<img src="img/slide-1.jpg" width="620" height="266" alt="slider">-->
+                <a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>          	
+                <label for="btn-2" class="btn-slider-prev"></label>
+                <label for="btn-2" class="btn-slider-next"></label>
+            </div>
+                            
+            <div class="slide">
+              <div class="slider-description">
+			    <h2>Дрели</h2>
+                <p>Соседям на радость</p>
+              </div>
+              <!--<img src="img/slide-2.jpg" width="620" height="266" alt="slider">-->
+              <a class="btncom btn-open-catalog" href="catalog.html">Открыть каталог</a>  
+              <label for="btn-1" class="btn-slider-prev"></label>
+              <label for="btn-1" class="btn-slider-next"></label>
+            </div>
+          
+          </div> <!-- end slides -->
+              
+        </div> <!-- end slider -->
         
         <article class="products products-discounts">
           <h2>Скидки 50%</h2>  
@@ -346,22 +320,28 @@
 				
         <div class="services-item-block clearfix">
 
+          <input type="radio" id="nav-1" name="service-toggle" checked >
+          <input type="radio" id="nav-2" name="service-toggle">
+          <input type="radio" id="nav-3" name="service-toggle">
+          
+          
 	      <div class="nav-services-block">
 		    <ul class="nav-services-list">
 		      <li>
-		        <a class="nav-services-item" href="#">Доставка</a>
+		        <label class="nav-services-item" for="nav-1">Доставка</label>
 		      </li>
 		      <li>
-				<a class="nav-services-item item-active">Гарантия</a>
+				<label class="nav-services-item" for="nav-2">Гарантия</label>
 			  </li>
 		      <li>
-				<a class="nav-services-item" href="#">Кредит</a>
+				<label class="nav-services-item" for="nav-3">Кредит</label>
 			  </li>
 		    </ul>
 		  </div>
 
 		  <div class="services-description">
-			<div class="service-delivery">						
+            
+			<div class="services-block">						
 			  <h2 class="services-item-title">Доставка</h2>                                
 			  <p class="services-item-description">
                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -370,7 +350,7 @@
 		    </div>
              
 		      
-            <div class="services-block service-garanty">						
+            <div class="services-block">						
 		      <h2 class="services-item-title">Гарантия</h2>                                
 		      <p class="services-item-description">
 		        Если купленный у нас товар поломается или заискрит, 
@@ -380,7 +360,7 @@
 		      </p>            
 		    </div>
 
-            <div class="services-block service-credit">						
+            <div class="services-block">						
 		      <h2 class="services-item-title">Кредит</h2>                                
 			  <p class="services-item-description">
                Залезть в долговую яму стало проще! 
@@ -563,7 +543,7 @@
 					</div> <!-- end wrapper -->
 
 					<label for="letter-content">Текст письма:</label>
-					<textarea id="letter-content" cols="61" rows="5" placeholder="В свободной форме">
+					<textarea id="letter-content" name="letter-content" cols="61" rows="5" placeholder="В свободной форме">
 					</textarea>
 
 				</div>
@@ -578,33 +558,154 @@
                                             <!--  Карта 940x447 -->
   <div class="modal-map">             
     <button class="close-window" title="Закрыть"></button>
-    <figure>
+    <!--<figure>
       <img src="img/map_940x446.jpg" alt="Схема проезда" width="940" height="446">
     </figure>
+		-->
+		<div id="yandex-map"></div>		
     
   </div>
   
+  <div class="modal-add-to-cart">
+    <button class="close-window" title="Закрыть"></button>
+    <p>Товар добавлен в корзину!</p>
+    <div class="btn-block">
+      <a class="btncom make-order" href="make-order.html">Оформить заказ</a>
+      <a class="btncom continue-purchase" href="#">Продолжить покупки</a>    
+    </div>
+  </div>
+	
+	
+	
+	
+	
   <script>
-    var modalFeedback = document.querySelector(".modal-feedback");
+                             /*   Обратная связь          */
+    
+    var modalFeedback = document.querySelector(".modal-feedback");                 
     var btnWriteUs = document.querySelector(".map .btn-write-us");
     var btnCloseWindowFeedback = modalFeedback.querySelector(".close-window");
-    
-    var modalMap = document.querySelector(".modal-map");
-    var btnShowMap = document.querySelector(".map .btn-write-us");
+    var userName = modalFeedback.querySelector("[name=user-name]");
+    var eMail = modalFeedback.querySelector("[name=e-mail]");
+    var letterContent = modalFeedback.querySelector("[name=letter-content]");
+	var form = modalFeedback.querySelector("form");
+        
+    var savedUserName = localStorage.getItem("user-name");
+    var savedEMail = localStorage.getItem("e-mail");
+        
+    if(savedUserName){
+      userName.value = savedUserName;          /* если есть сохраненные данные */
+    }
+    if(savedEMail){
+      eMail.value = savedEMail;
+    }
     
     btnWriteUs.addEventListener("click", function(event){
       event.preventDefault();
       modalFeedback.classList.add("show-modal-feedback");
+			/*userName.focus();*/
     });
     
     btnCloseWindowFeedback.addEventListener("click", function(event){
       event.preventDefault();
       if(modalFeedback.classList.contains("show-modal-feedback"))
         modalFeedback.classList.remove("show-modal-feedback");
+      if(modalFeedback.classList.contains("modal-error"))
+        modalFeedback.classList.remove("modal-error");
+    });
+		
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+      
+     /* if(modalFeedback.classList.contains("modal-error"))
+        modalFeedback.classList.remove("modal-error");*/
+      
+      if(!userName.value || !eMail.value || !letterContent.value){     /* трясем форму если какое-либо поле пустое */      
+        modalFeedback.classList.remove("modal-error");
+        modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+        modalFeedback.classList.add("modal-error");        
+      }      
+      else {
+        localStorage.setItem("user-name",userName.value);
+        localStorage.setItem("e-mail",eMail.value);        
+      }
+			
+	});
+		
+	window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+        if (event.keyCode === 27) {
+          if (modalFeedback.classList.contains("show-modal-feedback")) 
+            modalFeedback.classList.remove("show-modal-feedback");
+          if(modalFeedback.classList.contains("modal-error"))
+            modalFeedback.classList.remove("modal-error");                      
+        }
+    });
+    							          /* Карта */
+    
+    var modalMap = document.querySelector(".modal-map");							 
+    var btnShowMap = document.querySelector(".map .show-map");
+    var btnCloseWindowMap = modalMap.querySelector(".close-window");
+    
+    btnShowMap.addEventListener("click", function(event){
+      event.preventDefault();
+      modalMap.classList.add("show-modal-map");
     });
     
+    btnCloseWindowMap.addEventListener("click", function(event){
+      event.preventDefault();
+      if(modalMap.classList.contains("show-modal-map"))
+        modalMap.classList.remove("show-modal-map");    
+		});
+		
+    window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+      if (event.keyCode === 27) {
+        if (modalMap.classList.contains("show-modal-map")) {
+          modalMap.classList.remove("show-modal-map");            
+        }
+      }
+    });
+		
+		                       /* Товар добавлен в корзину */
     
+  	var modalAddToCart = document.querySelector(".modal-add-to-cart");          
+	var btnAddToCart = document.querySelectorAll(".products-item .btn-buy");     	
+	var btnCloseWindowCart = modalAddToCart.querySelector(".close-window");
+	var btnContinuePurchase = modalAddToCart.querySelector(".continue-purchase");        
+	/*var btnMakeOrder = modalAddToCart.querySelector(".make-order");*/  
+    
+	for(var i=0; i < btnAddToCart.length; i++){
+      btnCurrent = btnAddToCart[i];
+      btnCurrent.addEventListener("click", function(event){
+        event.preventDefault();
+        modalAddToCart.classList.add("show-modal-add-to-cart");
+      });
+    }
+    
+    btnCloseWindowCart.addEventListener("click", function(event){
+      event.preventDefault();
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+    });
+		
+	btnContinuePurchase.addEventListener("click", function(event){         /* при нажатии "продолжить покупки"  */
+      event.preventDefault();																									        			                                                  /* закрываем окно   			       */
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+    });
+		
+    window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+        if (event.keyCode === 27) {
+          if (modalAddToCart.classList.contains("show-modal-add-to-cart")) {
+                modalAddToCart.classList.remove("show-modal-add-to-cart");            
+          }
+        }
+      });
+
     
   </script>
+	
+	<!-- yandex map -->
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=AnHwc261dZfG9WjKkVKFEZp-_4GmMXfV&width=940&height=447&lang=ru_RU&sourceType=constructor&scroll=true&id=yandex-map"></script>
+	
 </body>
 </html>

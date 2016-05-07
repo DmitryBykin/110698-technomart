@@ -160,9 +160,9 @@
           <ul>
             <li> 
               <label class="manufacturer-checkbox">
-                <input type="checkbox" id="bosch" name="manufacturer" value="bosch" checked>
+                <input type="checkbox" id="bosch" name="manufacturer" value="bosch" checked>            
                 <span class="checkbox-indicator"></span>
-                Bosch
+                  Bosch
               </label>
             </li>                          
             <li> 
@@ -201,7 +201,7 @@
           <ul>
             <li>
               <label class="by-power-radio">
-                <input type="radio" name="power" id="accumulator" value="accumulator" checked> 
+              <input type="radio" name="power" id="accumulator" value="accumulator" checked>               
                 <span class="radio-indicator"></span>
                  Аккумуляторные
               </label>
@@ -525,9 +525,50 @@
     <button class="close-window" title="Закрыть"></button>
     <p>Товар добавлен в корзину!</p>
     <div class="btn-block">
-      <a class="btncom make-order" href="#">Оформить заказ</a>
+      <a class="btncom make-order" href="make-order.html">Оформить заказ</a>
       <a class="btncom continue-purchase" href="#">Продолжить покупки</a>    
     </div>
   </div>
+  
+   <script>
+                    
+	var modalAddToCart = document.querySelector(".modal-add-to-cart");           /* Товар добавлен в корзину   */
+	var btnAddToCart = document.querySelectorAll(".products-item .btn-buy");     	
+	var btnCloseWindowCart = modalAddToCart.querySelector(".close-window");
+	var btnContinuePurchase = modalAddToCart.querySelector(".continue-purchase");        
+
+		
+		                       /* Товар добавлен в корзину */
+	for(var i=0; i < btnAddToCart.length; i++){
+      btnCurrent = btnAddToCart[i];
+      btnCurrent.addEventListener("click", function(event){
+        event.preventDefault();
+        modalAddToCart.classList.add("show-modal-add-to-cart");
+      });
+    }
+    
+    btnCloseWindowCart.addEventListener("click", function(event){
+      event.preventDefault();
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+    });
+		
+	btnContinuePurchase.addEventListener("click", function(event){         /* при нажатии "продолжить покупки"  */
+      event.preventDefault();																									        			                                                  /* закрываем окно   			       */
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+    });		
+     
+    window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+        if (event.keyCode === 27) {
+          if (modalAddToCart.classList.contains("show-modal-add-to-cart")) {
+                modalAddToCart.classList.remove("show-modal-add-to-cart");            
+          }
+        }
+      });
+	
+    
+  </script>
+  
 </body>
 </html>
