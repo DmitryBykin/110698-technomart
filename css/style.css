@@ -99,21 +99,22 @@ button:focus {
 	background-color: #293449;
 }
 .top-logo {
-    position: relative;
-	width: 220px;	
-	padding-top: 9px;
-    //height: 42px;
-	padding-bottom: 8px; 		
-	//margin-right: 20px;
-	float: left;		
-	background-color: #ee3643;	
-	text-align: center;
-	font-family: Cuprum;	
-	font-size: 24px;
-	line-height: 24px;	
-	text-transform: uppercase;		
-	//border-bottom: 5px solid #b52933;
-	border-top: 1px solid #e03643;	
+  float: left;		  
+  position: relative;
+
+  width: 220px;	
+  
+  padding-top: 9px;
+  padding-bottom: 8px; 		
+  
+  font-family: Cuprum, Tahoma, sans-serif;	    
+  font-size: 24px;
+  line-height: 24px;	
+  text-transform: uppercase;		
+  text-align: center;
+  
+  background-color: #ee3643;	
+  border-top: 1px solid #e03643;	
 }
 .top-logo::after {               /*   полоска под логотипом  */
   position: absolute;
@@ -125,18 +126,23 @@ button:focus {
   background-color: #b52933;
 }
 .footer-top-logo {    
-	width: 220px;	
-	float: left;
-	background-color: #ee3643;
-	margin-right: 20px;
-	text-align: center;
-	font-family: Cuprum;	
-	text-transform: uppercase;	
-	font-size: 24px;
-	line-height: 24px;
-	padding-top: 20px;
-	padding-bottom: 20px; 
-	border-bottom: 5px solid #b52933;	
+  float: left;	
+  width: 220px;	
+
+  margin-right: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px; 
+  
+  
+  font-family: Cuprum;	
+  text-align: center;
+  text-transform: uppercase;	
+  
+  font-size: 30px;
+  line-height: 30px;
+	
+  border-bottom: 5px solid #b52933;	
+  background-color: #ee3643;
 }
 
 .searching-form {	
@@ -154,7 +160,7 @@ button:focus {
   width: 16px;
   height: 16px;
 
-  top: 14px;
+  top: 13px;
   left: 18px; 
 
   border: 0;
@@ -167,7 +173,7 @@ button:focus {
 }
 
 .searching-form input[type="text"] {  
-  padding: 12px 60px 12px 50px;
+  padding: 10px 60px 14px 48px;
 	
   border: 0;
   outline: 0;
@@ -206,15 +212,15 @@ button:focus {
 /********************* end стили для placeholder ***********************************************/
 .bookmarks-block a {
   position: relative;
-  width: 100px;
   float: left;
-  padding-top: 12px;
-  padding-bottom: 12px;	    
-  padding-right: 5px;
-  padding-left: 45px;
-  //margin-right: 20px;
+  
+  width: 100px;
+  
+  padding: 12px 5px 12px 45px;
+    
   font-size: 17px;
   line-height: 18px;  	    	
+  
   background-color: #293449;	  
 }
 .bookmarks-block a::before {  
@@ -222,8 +228,8 @@ button:focus {
   content: "";
   width: 14px;
   height: 16px;
-  top: 15px;
-  left: 15px;
+  top: 13px;
+  left: 17px;
   background: url("../img/sprites.png") no-repeat -19px 0;
   opacity: 0.3;
 }
@@ -231,26 +237,28 @@ button:focus {
   opacity: 1;
 }
 .cart-block a {
-    position: relative;
-	width: 100px;
-	//height: 42px;
-	float: left;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    //padding-right: 30px;
-    padding-left: 50px;    
-	background-color: #293449;	
-    font-size: 17px;
-    line-height: 18px;  	
-	//margin-right: 20px;
+  float: left;  
+  position: relative;
+  
+  width: 100px;
+	
+  padding: 12px 0 12px 50px;
+  
+  font-size: 17px;
+  line-height: 18px;  	
+  
+  background-color: #293449;	  
 }
 .cart-block a::before {
   position: absolute;
   content: "";
+  
   width: 17px;
   height: 16px;
-  top: 15px;
-  left: 15px;
+  
+  top: 14px;
+  left: 16px;
+  
   background: url("../img/sprites.png") no-repeat -35px 0;
   opacity: 0.3;
 }
@@ -265,15 +273,18 @@ button:focus {
   background-color: #161d29;
 }
 .btn-make-order a {    
-	width: 150px;
-	//height: 42px;
-	float: right;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-	background-color: #63a63e;	
-    font-size: 17px;
-    line-height: 18px;  
+  float: right;
+  
+  width: 150px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  
+  font-size: 17px;
+  line-height: 18px;  
+  text-align: center;
+  
+  background-color: #63a63e;	
 }
 .btn-make-order a:hover {
   background-color: #5fbb2d;
@@ -298,16 +309,21 @@ button:focus {
 	width: 940px;	   
 }
 .top-info-block h1 {
-	width: 200px;
-	min-height: 65px;	
-	float: left;
-	margin-right: 60px;
-	margin-left: 50px;
-    font-size: 16px;
-    line-height: 23px;
-    font-weight: normal;
-    font-style: italic;
-    color: #ee3643;    
+  float: left;	
+  width: 200px;
+
+  min-height: 65px;	
+	
+  margin-right: 70px;
+  margin-left: 50px;
+  
+  font-size: 16px;
+  line-height: 23px;
+  
+  font-weight: normal;
+  font-style: italic;
+  
+  color: #ee3643;    
  }
 .top-contacts-block {
   width: 272px;
@@ -317,12 +333,17 @@ button:focus {
 }
 .top-phone {
   position: relative;
+  
   padding-top: 10px;
   padding-bottom: 10px;  
+  padding-left: 73px;
+  
   font-size: 21px;
   line-height: 18px;
+  
   font-style: normal;
-  text-align: center;
+  //text-align: center;
+  
   color: #e9292a;  
   border: 3px solid white;
 }
@@ -352,21 +373,29 @@ button:focus {
 .btn-enter {
   position: relative;
   display: inline-block;
+  
   vertical-align: top;
-  padding: 15px 25px 15px 46px;  
+  
+  padding: 14px 25px 14px 46px;  
   margin-right: 6px;
-  background-color: #ffffff;
+  
   font-size: 21px;
   line-height: 18px;
+  
+  background-color: #ffffff;
+  
   color: black;    
 }
 .btn-enter::before {      /*  Кнопка ВОЙТИ   */
   position: absolute;
   content: "";
+  
   width: 22px;
   height: 19px;
-  top: 17px;
-  left: 10px;
+  
+  top: 15px;
+  left: 12px;
+  
   background: url("../img/sprites.png") no-repeat -21px -20px;
 }
 .btn-enter:hover::before {
@@ -375,10 +404,13 @@ button:focus {
 .btn-registration {
   display: inline-block;
   vertical-align: top;  
-  padding: 15px 25px 15px 25px;  
+  
+  padding: 14px 25px 14px 25px;  
+  
   background-color: #ffffff;
   font-size: 21px;
   line-height: 18px;
+  
   color: black;
 }
 .btn-enter:hover, 
@@ -394,15 +426,14 @@ button:focus {
   width: 940px;  
   background-color: #32425c;	  
   color: #ffffff;  
-  border-bottom: 5px solid #293449;
+  border-bottom: 5px solid #293449;  
 }
 .nav-block ul {
-	margin-left: 50px;
-	//margin-top: 20px;  
+	margin-left: 25px;	
 }
 .nav-block a {
   display: block;
-  padding: 20px 30px;  
+  padding: 18px 30px;  
 }
 .nav-block a:hover {
   background-color: #293449;
@@ -414,43 +445,52 @@ button:focus {
 	float: left;	
 }
 .products {             
-	width: 300px;
-	height: 123px;
-	float: left;
-	margin-right: 20px;	
+  float: left;	
+  width: 300px;
+  height: 123px;
+
+margin-right: 20px;	
 }
 .products h2 {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 22px;
+  
   font-size: 24px;
   line-height: 30px;  
   font-weight: bold;
 }
 .products-materials {
-  background: #f6b22d url("../img/materials.png") no-repeat 212px 32px;
+  position: relative;            /* Для надписи NEW */
+  
+  background: #f6b22d url("../img/materials.png") no-repeat 213px 31px;
 }
 .products-tools {
-  background: #4aafde url("../img/instruments.png") no-repeat 200px 32px;
+  background: #4aafde url("../img/instruments.png") no-repeat 197px 33px;
 }
 .products-technics {
-  background: #cc79d1 url("../img/technics.png") no-repeat 200px 32px;
+  background: #cc79d1 url("../img/technics.png") no-repeat 191px 31px;
 }
 .products-discounts {
-  background: #85d179 url("../img/discounts.png") no-repeat 200px 32px;
+  background: #85d179 url("../img/discounts.png") no-repeat 196px 26px;
 }
 .products-delivery {
-  background: #f6b22d url("../img/delivery.png") no-repeat 200px 32px;
+  background: #f6b22d url("../img/delivery.png") no-repeat 191px 32px;
 }
 .btn {
   display: block;
+  
   width: 135px;
-  padding: 15px 0 15px 0;
-  margin-top: 10px;
-  margin-left: 20px;
+  
+  padding: 11px 0;
+  
+  margin-top: 12px;
+  margin-left: 25px;
+  
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  
   background-color: rgba(0,0,0,0.1);  
   border-radius: 2px;  
 }
@@ -491,11 +531,14 @@ button:focus {
 .btncom {
 	display: block;
   
-	padding-top: 15px;
-	padding-bottom: 15px;	
+	padding-top: 10px;
+	padding-bottom: 10px;	
   
 	text-align: center;
 	text-transform: uppercase;
+    
+    font-size: 14px;
+    line-height: 18px;
   
   	background-color: #ee3643;
 	color: #ffffff;
@@ -512,7 +555,8 @@ button:focus {
   width: 253px;	
   float: right;
   margin-right: 25px;
-  margin-top: 20px;	
+  margin-top: 25px;	
+
 }
 .popular-products-items {
   margin-bottom: 20px;
@@ -536,7 +580,7 @@ button:focus {
   width: 21px;
   height: 40px;
   
-  left: 28px;
+  left: 26px;
   top: 116px;
   
   background: url("../img/sprites.png") no-repeat -68px -119px;   
@@ -558,9 +602,12 @@ button:focus {
 .btn-open-catalog {
   position: absolute;  
   left: 25px;
-  bottom: 25px;
+  bottom: 23px;
   
-  padding: 11px 37px 11px 37px;  
+  font-size: 14px;
+  line-height: 18px;
+  
+  padding: 10px 49px 10px 49px;  
 }
 .slider-description {
   position: absolute;
@@ -568,17 +615,18 @@ button:focus {
   left: 0;  
 }
 .slider-description h2 {
-  margin-top: 27px;
-  margin-left: 27px;
+  margin-top: 25px;
+  margin-left: 25px;
   
   font-size: 36px;
   line-height: 30px;
   font-weight: bold;
+  text-transform: uppercase;
   color: white;  
 }
 .slider-description p {
-  margin-left: 27px;
-  margin-top: 10px;
+  margin-left: 25px;
+  margin-top: 5px;
   
   font-family: "PT Sans",Tahoma, sans-serif;
   font-size: 18px;
@@ -599,7 +647,6 @@ button:focus {
     display: none;
 }
 
-
 .slide:nth-child(1){
   background: url("../img/slide-1.jpg") no-repeat 0 0;
 }
@@ -615,7 +662,7 @@ button:focus {
 .slider-controls{
     position:absolute;
   
-    bottom:35px;  
+    bottom:37px;  
     left:50%;
   
     width:200px;
@@ -630,8 +677,8 @@ button:focus {
     display:inline-block;
     vertical-align:top;
   
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   
     margin: 0 3px;
     background:white;
@@ -655,45 +702,58 @@ button:focus {
 
 /****************************** Карточка товара *********************/
 .products-item {            
+  float: left;
   position: relative;
+
+  margin-right: 20px;
+  
   width: 218px;
   height: 318px;
-  border: 1px solid #e5e5e5;
-  float: left;
-  margin-right: 20px;
+  
+  border: 1px solid #e5e5e5;  
 }
 .products-item:nth-of-type(4n){
-	margin-right: 0;
+  margin-right: 0;
 }
 .products-item figure {
-  margin: 45px 17px;
+  margin: 40px 0 50px 0;    
   text-align: center;
 }
+
 .item-title {
   position: absolute;
-  top: 180px;
+  
+  top: 177px;
   bottom: 100px;
-  left: 10px;
-  right: 10px;
+  
+  left: 15px;
+  right: 15px;
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-  color: black;
   text-align: center;
+  
   overflow: hidden;     /* названия более 2-х строк обрезаются  */
+  color: black;
 }
 .old-price {
   position: absolute;
+  
   bottom: 70px;
   left: 0;  
   right: 0;
-  //margin-top: 10px;
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 17px;
   line-height: 18px;
-  font-weight: bold;
-  color: #999999;
+  font-weight: bold;  
   text-align: center;
+  text-transform: uppercase;
   text-decoration: line-through;
+  
+  color: #999999;
 }
 .price {
   width: 88px;   
@@ -706,6 +766,7 @@ button:focus {
   padding-top: 10px;
   padding-bottom: 10px;
   
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -756,7 +817,7 @@ button:focus {
   display: none;  
   
   height: 90px;
-  margin: 46px 40px;
+  margin: 45px 40px;
   
   text-align: center;
   
@@ -765,7 +826,7 @@ button:focus {
 .btn-item {         /* Кнопка "купить" и "в закладки" общие параметры */    
   display: block; 
   
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 10px;
   
   font-size: 14px;
@@ -777,7 +838,7 @@ button:focus {
 .btn-buy {           /* Кнопка купить в карточке товара */
   position: relative;
   
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   
   color: white;
   background-color: #63a63e;    
@@ -832,7 +893,7 @@ button:focus {
 	float: left;
     width: 380px;
 
-	margin-left: 30px;
+	margin-left: 25px;
 	margin-top: 30px;
   
 	color: #32425c;	
@@ -845,7 +906,7 @@ button:focus {
     position: relative;
   
 	width: 218px;
-	height: 145px;
+	height: 143px;
   
 	margin-right: 20px;
     margin-bottom: 20px;
@@ -877,12 +938,12 @@ button:focus {
 	margin-right: 0;
 }
 .manufacturers-items {	
-	margin-bottom: 70px;
+	margin-bottom: 65px;
 }
 
 
 .services {
-	background-color: #f2f6f8;
+  background-color: #f2f6f8;
 }
 .services-title-block {
   padding-top: 65px;  
@@ -893,6 +954,7 @@ button:focus {
   font-size: 30px;  
   line-height: 24px; 
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 .services-title-description {
   width: 400px;
@@ -908,9 +970,11 @@ button:focus {
   padding-top: 50px;  	
 }
 .nav-services-block {
-  position: relative;
-  width: 240px;	  	
-  float: left;	
+  position: relative;    	
+  float: left;	  
+  
+  margin-top: 5px;
+  width: 240px;  
 }
 .nav-services-block::after {  
   position: absolute;
@@ -927,20 +991,21 @@ button:focus {
 
 .services-description {    
   float: right;
-  width: 625px;
-  height: 285px;   
+  
+  width: 626px;
+  height: 287px;   
 }
 .services-block:nth-child(1) {    
   height: 100%; 
-  background: url("../img/services-delivery.png") right bottom no-repeat;
+  background: url("../img/services-delivery.png") no-repeat right bottom;
 }
 .services-block:nth-child(2) {
   height: 100%;
-  background: url("../img/services-guarantee.png") right bottom no-repeat;
+  background: url("../img/services-guarantee.png") no-repeat right bottom;
 }
 .services-block:nth-child(3) {
   height: 100%;
-  background: url("../img/services-credit.png") right bottom no-repeat;
+  background: url("../img/services-credit.png") no-repeat right bottom;
 }
 .send-service-request {
   width: 195px;
@@ -953,7 +1018,7 @@ button:focus {
   
   padding-top: 20px;
   padding-bottom: 22px;
-  padding-left: 25px;  
+  padding-left: 23px;  
   
   font-size: 21px;
   font-weight: bold;
@@ -961,7 +1026,7 @@ button:focus {
   background-color: #32425c;
   border-bottom: 1px solid #293449;
   color: white;
-  cursor: pointer;
+  cursor: pointer;  
 }
 .nav-services-item:hover {
   background-color: #293449;
@@ -971,17 +1036,20 @@ button:focus {
 }
 
 .services-description h2 {
+  padding-top: 5px;
+  padding-left: 5px;
+  
   font-size: 36px; 
   line-height: 24px;
   text-transform: uppercase;
-  
-  color: #32425c;
+    
+  color: #32425c;  
 }
 .services-description p {  
-  width: 280px;
-  //height: 100px;
+  width: 280px;  
 
-  padding-top: 30px;
+  padding-top: 30px;  
+  padding-left: 5px;
   
   font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;  
@@ -1028,23 +1096,26 @@ button:focus {
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 30px;
+  
   color: black;
 }
 .about-company p,
 .map p {
   margin-top: 25px;
-  font-family: "PT Sans";
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;  
   line-height: 24px;	
 }
 .about-company p:last-of-type {
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 .about-company li {	
   position: relative;
   
   padding-left: 37px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   
   font-size: 18px;    
 }
@@ -1060,12 +1131,10 @@ button:focus {
   
   background-color: #fb565a;
 }
-
-
 .btn-about {
   width: 220px;			
   margin-right: 25px;
-  margin-top: 40px;		
+  margin-top: 37px;		
 }
 .map {
   width: 300px;
@@ -1073,31 +1142,33 @@ button:focus {
   color: black;
 }
 .map figure {
-	margin-top: 39px;
-	margin-bottom: 39px;		
+	margin-top: 32px;
+	margin-bottom: 36px;		
 }
 .about-map-block {
   margin-bottom: 87px;
 }
+
+
 .footer-main-page,
 .footer-catalog-page {
-	//margin-top: 87px;
 	background-color: #32425c;
 }
 .footer-top-nav {
-	width: 560px;
+	width: 555px;
 	height: 47px;
-	float: right;	
-	//background-color: antiquewhite;
+  
+	float: right;	  
 }
-.footer-top-nav li {
-	float: left;
-	margin-right: 60px;
-	margin-top: 39px;
-	font-size: 18px;	
+.footer-top-nav li {	
+  float: right;
+	
+  margin-left: 59px;
+  margin-top: 40px;
+  font-size: 18px;	
 }
-.footer-top-nav li:last-of-type {
-	margin-right: 0;
+.footer-top-nav li:last-of-type {  
+  margin-left: 0;    
 }
 .footer-top-nav a {
 	color: #f1f5f7;	
@@ -1111,23 +1182,27 @@ button:focus {
   opacity: 0.5;
 }
 .footer-contacts-block {	
-	width: 335px;
-	height: 60px;
-	margin-top: 32px;
-	float: left;
+  float: left;
+  
+  width: 335px;
+  min-height: 45px;
+  margin-top: 27px;	
+  margin-left: 3px;
 }
 .footer-features-nav {
-	width: 530px;
-	height: 60px;
-	margin-top: 32px;
 	float: right;
+  
+    width: 530px;
+	min-height: 45px;
+	margin-top: 27px;
 }
 .footer-features-nav li {
-	margin-right: 60px;
-	float: left;
+  float: right;	
+  
+  margin-left: 59px;	
 }
 .footer-features-nav li:last-of-type {
-	margin-right: 0;	
+	margin-left: 0;	
 }
 .footer-features-nav a {
 	font-size: 18px;
@@ -1135,36 +1210,45 @@ button:focus {
 }
 .footer-contacts-block address {
 	font-size: 18px;
-    line-height: 22px;
+    line-height: 24px;
 	font-style: normal;
 	color: #f1f5f7;
 }
 .footer-bottom-block {
-	margin-top: 55px;
+	margin-top: 49px;
 	background-color: #293449;
     font-size: 18px;
     line-height: 20px;      
 }
 .footer-bottom-copyright {	
-	width: 240px;
-	height: 60px;
-	float: left;
-	padding-top: 35px;
-	margin-right: 135px;    
+  float: left;
+  
+  width: 245px;
+  height: 65px;
+  
+  padding-top: 35px;
+  margin-right: 145px;   
+  padding-bottom: 15px;
+  
+  font-size: 16px;
+  line-height: 18px;         
 }
 .footer-bottom-social {
 	width: 170px;
-	height: 60px;
+	height: 65px;
 	float: left;
 	padding-top: 35px;
-    margin-right: 90px;
+    margin-right: 80px;
 }
 .footer-bottom-social li {
 	float: left;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 .footer-bottom-feedback a,
 .footer-bottom-develop a {
+  font-size: 16px;
+  line-height: 18px; 
+  
   color: #ffd180; 
 }
 .footer-bottom-feedback a:hover,
@@ -1175,7 +1259,23 @@ button:focus {
 .footer-bottom-develop a:active {
   color: #ee3643; 
 }
-
+.footer-bottom-feedback p,
+.footer-bottom-develop p  {
+  font-size: 16px;
+  line-height: 18px; 
+}
+.footer-bottom-feedback {
+	width: 170px;
+	height: 60px;
+	float: left;
+	padding-top: 35px;
+}
+.footer-bottom-develop {
+	width: 112px;
+	height: 60px;
+	float: right;
+	padding-top: 35px;
+}
 
 .social-btn {
   position: relative;
@@ -1206,18 +1306,7 @@ button:focus {
 .social-btn-inst:active {
   background-position: -94px -226px;
 }
-.footer-bottom-feedback {
-	width: 170px;
-	height: 60px;
-	float: left;
-	padding-top: 35px;
-}
-.footer-bottom-develop {
-	width: 100px;
-	height: 60px;
-	float: right;
-	padding-top: 35px;
-}
+
 /***************************************** страница catalog.html  ********************************/
 .top-block-catalog {
 	padding-top: 46px;
@@ -1241,22 +1330,28 @@ button:focus {
   background-color: white;
 }
 .profile {
-  width: 200px;
   float: left;
   position: relative;
+  
+  width: 200px;
+  
+  padding: 11px 0 11px 47px;
+  
   font-size: 21px;
-  line-height: 24px;
-  padding: 11px 0 11px 45px;
-  color: black;  
-  //white-space: nowrap;
+  line-height: 24px;  
+  
+  color: black;    
 }
 .profile::before {
   position: absolute;
   content: "";
+  
   width: 20px;
   height: 19px;
+  
   left: 15px;
   top: 13px;
+  
   background: url("../img/sprites.png") no-repeat 0 -43px;
 }
 .profile:hover::before {
@@ -1264,10 +1359,13 @@ button:focus {
 }
 .btn-logout {
   float: right;  
-  margin-right: 14px;
+  
+  margin-right: 9px;
   margin-top: 15px;  
+  
   width: 21px;
   height: 16px;
+  
   border: 0;
   background: url("../img/sprites.png") no-repeat -71px -21px;
   cursor: pointer;
@@ -1287,37 +1385,49 @@ button:focus {
 .orders-personal-list a:active {  
   opacity: 0.3;  
 }
+.orders-personal-item a {
+  margin-left: -5px;
+}
 .orders-personal-item:first-child a {
   position: relative;
-  padding-right: 25px;  
+  
+  margin-left: 17px;
+  padding-right: 20px;  
 }
-.orders-personal-item:first-child a::after {  /* Точка */
-  content: "";
+
+.orders-personal-item:first-child a::after {  /* Точка */  
   position: absolute;
+  content: "";
+  
   width: 4px;
   height: 4px;
+  
   right: 0;
   top: 8px;  
+  
   border-radius: 50%;
   background-color: #32425c;
 }
-.orders-personal-list {
-  margin-left: 25px;
-  margin-top: 5px;
+
+.orders-personal-list {  
+  margin-top: 6px;
 }
 .breadcrumbs ul {
-	width: 940px;		
+  width: 940px;		
 }
 .breadcrumbs li {
-    position: relative;
-	padding-right: 20px;		
-	padding-bottom: 23px;
-    margin-top: 23px;
-    margin-right: 20px;
-	font-size: 13px;
-    line-height: 18px;
-	text-transform: uppercase;	
-	float: left;
+  float: left;
+  position: relative;
+  
+  padding-right: 22px;		
+  padding-bottom: 23px;
+  margin-top: 22px;
+  margin-right: 19px;
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 18px;    
+  text-transform: uppercase;	
 }
 .breadcrumbs li::after {
   position: absolute;
@@ -1350,28 +1460,40 @@ button:focus {
 	margin-bottom: 20px;
 }
 .catalog-title-block h2 {	
-	padding-left: 50px;
-	padding-top: 30px;
+	padding-left: 29px;
+	padding-top: 26px;
 	padding-bottom: 30px;
+  
 	font-size: 30px;
 	font-weight: normal;
-	color: #32425c;
 	text-transform: uppercase;
+  	color: #32425c;
 }
 
 /************* Блок с фильтрами ******************************/
 .filter-block {
-	width: 220px;
-	float: left;    
+  float: left;    
+  width: 220px;  
+}
+.filter-block-name h2 {	
+  padding: 10px 0 10px 20px;  
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;  
+  color: black;
 }
 .filter-title h2 {
   padding-top: 10px;
+    
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  font-family: "PT Sans";
-  font-weight: bold;
-  color: black;
   text-transform: uppercase;
+  
+  color: black;  
 }
 .main-items-block {
 	width: 700px;
@@ -1380,41 +1502,39 @@ button:focus {
 .filter-block-name {
 	background-color: #f7f3ec;
 }
-.filter-block-name h2 {	
-	padding-left: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 13px;
-	color: black;
-	text-transform: uppercase;  
-}
+
 .searching-by-manufacturer h2,
 .searching-by-power h2 {  
-  font-size: 17px;
-  line-height: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
   font-family: "PT Sans",Tahoma, sans-serif;
-  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;  
+  font-weight: bold;  
+  text-transform: uppercase;
+  
   color: black;
-  text-transform: uppercase;  
 }
 
 .searching-by-manufacturer,
 .searching-by-power {
-  font-size: 15px;
-  line-height: 20px;
   font-family: "PT Sans",Tahoma, sans-serif;
-  font-weight: normal;
-  color: black;
+  font-size: 15px;
+  line-height: 20px;  
+  font-weight: normal;  
   text-transform: uppercase;  
+  
+  color: black;
 }
 .searching-by-manufacturer {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 2px;
+  
   border-bottom: 1px solid #e5e5e5;
 }
 .searching-by-manufacturer li,
 .searching-by-power li {
-  margin-top: 20px;  
+  margin-bottom: 20px;  
 }
 .searching-by-manufacturer input[type="checkbox"],
 .searching-by-power input[type="radio"] {
@@ -1498,7 +1618,7 @@ button:focus {
 .btn-filtr {
   min-width: 77px;
   
-  margin-top: 80px;  
+  margin-top: 60px;  
   padding: 9px 40px;  
   
   font-size: 13px;
@@ -1509,6 +1629,7 @@ button:focus {
   border: 1px solid #e5e5e5;
   border-radius: 2px;  
   
+  background-color: white;
   color: black;  
   
   cursor: pointer;  
@@ -1526,21 +1647,31 @@ button:focus {
 	float: left;
 }
 .sorting-title h2 {
-	padding-left: 20px;
-	margin-right: 140px;
-	padding-top: 5px;
-	padding-bottom: 5px;	
-	font-size: 13px;
-	color: black;
-	text-transform: uppercase;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  margin-right: 140px;
+    
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: black;
 }
 .sorting-block li { 
-	float: left;
-	margin-right: 75px;	
-    padding-top: 12px;
-	font-size: 13px;
-    line-height: 14px;
-    text-transform: uppercase;	
+  float: left;
+  
+  margin-right: 70px;	
+  padding-top: 10px;
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;	
+}
+.sorting-block li:last-child {
+  margin-right: 40px;	
 }
 .sorting-block a {
     color: black;
@@ -1562,12 +1693,17 @@ button:focus {
 }
 .btn-triangle {
   margin-top: 15px;
-  margin-right: 20px;
+  margin-right: 18px;
+  
   width: 11px;
   height: 10px;
+  
   border: 0;
   background: url("../img/sprites.png") no-repeat;
   cursor: pointer;
+}
+.btn-triangle:last-of-type {
+  margin-right: 0;
 }
 .btn-up {
   background-position: 0 -83px;
@@ -1589,40 +1725,49 @@ button:focus {
 }
 /***************** Карточки товара ***********/
 .items-block .products-item { /* article */
-  width: 218px;    /* 218+border = 220 */
-  height: 318px;
   float: left;
-  border: 1px solid #e5e5e5;
+  
+  width: 218px;    /* 218+border = 220 */
+  height: 316px;
+  
   margin-right: 20px;
   margin-top: 20px;
+  
+  border: 1px solid #e5e5e5;
 }
 .items-block .products-item:nth-of-type(3n){
   margin-right: 0;
 }
 
 .items-block {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 /***************** Кнопки со страницами *************************/
 .pagination-list {
   margin-bottom: 60px;	
 }
- .pagination-list li {
-	float: left;	
+.pagination-list li {
+  float: left;	
 }
 .paginator-item a {	
   display: block;	
+  
   width: 38px;  		
-  padding-top: 12px;  
-  padding-bottom: 12px;  
-  color: black;
-  margin-right: 10px;
+  
+  padding-top: 10px;  
+  padding-bottom: 10px;  
+  margin-right: 8px;
+  
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;  
+  
   border: 1px solid #e5e5e5;
-  border-radius: 2px;  
+  border-radius: 3px;  
+  
+  color: black;
 }
 .paginator-item a:hover {
   border-color: #bdc6ca;
@@ -1632,6 +1777,7 @@ button:focus {
 }
 .paginator-item-active a {
   background-color: red;
+  
   color: white;
 }
 .paginator-item-next a {   
@@ -1639,12 +1785,14 @@ button:focus {
   padding-right: 30px;
   padding-left: 30px;
 }
+
+
 .about-product {
-  padding-top: 70px;
+  padding-top: 65px;
   background-color: #f2f6f8;
 }
 .about-product h2 {
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   font-size: 30px;
   color: black;  
   text-transform: uppercase;
@@ -1654,23 +1802,26 @@ button:focus {
   font-size: 13px;  
   line-height: 24px;
   color: black;
-  padding-bottom: 70px;
+  padding-bottom: 67px;
 }
 
 /****************  ФИЛЬТР ******************************/
 .range-filter{
-    padding-top: 10px;
-    padding-bottom: 20px;
-    width: 220px;
-    margin: auto;
-    margin-bottom: 10px;
-    color: black;
-    border-bottom: 1px solid #e5e5e5;
+  width: 220px;
+  
+  padding-top: 14px;
+  padding-bottom: 25px;
+    
+  margin: auto;
+  margin-bottom: 10px;  
+  
+  border-bottom: 1px solid #e5e5e5;
+  color: black;
 }
 .range-controls{
     position: relative;
     height: 80px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 0 30px;
     background: #f7f3ec;
     border-radius: 0 0 3px 3px;
@@ -1697,24 +1848,40 @@ button:focus {
     border-radius: 50%;
 }
 .min-toggle{
-    left: 70px;
+    left: 20px;
 }
 .max-toggle{
-    left: 165px;
+    left: 162px;
+}
+.price-controls {
+  position: relative;
 }
 .min-price, .max-price {
-    width: 80px;
+    width: 95px;
     
-    padding: 8px 10px;    
+    padding: 10px 0;    
     
-    font-size: 16px;
-    font-family: Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "PT Sans", Tahoma, sans-serif;
     text-align: center;
     color: black;  
   
     border: none;
     background: #f7f3ec;    
     border-radius: 5px;    
+}
+.line {
+  position: absolute;
+  content: "";
+  
+  width: 10px;
+  height: 1px;
+  
+  left: 105px;
+  top: 21px; 
+  
+  background-color: black;
 }
 .max-price {
   float: right;
