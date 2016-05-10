@@ -733,7 +733,7 @@ button:focus {
   margin-right: 20px;
   
   width: 218px;
-  height: 318px;
+  height: 316px;
   
   border: 1px solid #e5e5e5;  
 }
@@ -741,10 +741,8 @@ button:focus {
   margin-right: 0;
 }
 .products-item figure {
-  margin-top: 40px;
-  margin-bottom: 50px;  
-  
-  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 54px;    
 }
 
 .item-title {
@@ -1580,8 +1578,7 @@ button:focus {
 	background-color: #f7f3ec;
 }
 
-.searching-by-manufacturer h2,
-.searching-by-power h2 {  
+.searching-by-manufacturer h2  {  
   margin-top: 15px;
   margin-bottom: 15px;
   
@@ -1593,9 +1590,21 @@ button:focus {
   
   color: black;
 }
+.searching-by-power h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+  font-family: "PT Sans",Tahoma, sans-serif;
+  font-size: 17px;
+  line-height: 30px;  
+  font-weight: bold;  
+  text-transform: uppercase;
+  
+  color: black;
+  letter-spacing: 0.5px;
+}
 
-.searching-by-manufacturer,
-.searching-by-power {
+.searching-by-manufacturer {
   font-family: "PT Sans",Tahoma, sans-serif;
   font-size: 15px;
   line-height: 20px;  
@@ -1603,6 +1612,15 @@ button:focus {
   text-transform: uppercase;  
   
   color: black;
+}
+.searching-by-power {
+  font-family: "PT Sans",Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 20px;  
+  font-weight: normal;  
+  text-transform: uppercase;  
+  
+  color: black;  
 }
 .searching-by-manufacturer {
   padding-bottom: 2px;
@@ -1700,6 +1718,7 @@ button:focus {
   margin-top: 60px;  
   padding: 9px 40px;  
   
+  font-family: "PT Sans",Tahoma, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1873,8 +1892,9 @@ button:focus {
   background-color: #f2f6f8;
 }
 .about-product h2 {
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   font-size: 30px;
+  line-height: 24px;
   
   text-transform: uppercase;
   
@@ -1884,8 +1904,9 @@ button:focus {
   font-family: "PT Sans",Tahoma, sans-serif;
   font-size: 13px;  
   line-height: 24px;
+  letter-spacing: 0.25px;
   
-  padding-bottom: 67px;
+  padding-bottom: 70px;
   
   color: black;
 }
@@ -1956,6 +1977,7 @@ button:focus {
   
   font-size: 17px;
   line-height: 18px;
+  font-weight: bold;
   font-family: "PT Sans", Tahoma, sans-serif;
   text-align: center;
   color: black;  
