@@ -94,7 +94,10 @@ button:focus {
 	margin: 0 auto;	
 }
 .header-main-page,
-.header-catalog {
+.header-catalog, 
+.header-map-page,
+.header-feedback-page,
+.header-addedtocart-page {
 	min-height: 42px;
 	background-color: #293449;
 }
@@ -519,14 +522,17 @@ margin-right: 20px;
 	background-color: #f7f3ec;	
 }
 .products-title-block h2 {
-	width: 270px;
 	float: left;
+	width: 270px;
+	
 	margin-left: 30px;
-	margin-top: 30px;
+	margin-top: 30px;	
+	
+  font-size: 30px;
+  line-height: 30px;  
+  text-transform: uppercase;
+	
 	color: #32425c;	
-    font-size: 30px;
-    line-height: 30px;  
-    text-transform: uppercase;
 }
 .btncom {
 	display: block;
@@ -552,11 +558,11 @@ margin-right: 20px;
 }
 .btn-popular-products,
 .btn-popular-manufactures {
-  width: 253px;	
   float: right;
+	width: 253px;	
+  
   margin-right: 25px;
   margin-top: 25px;	
-
 }
 .popular-products-items {
   margin-bottom: 20px;
@@ -2037,8 +2043,7 @@ selector{
 }
 .button-block {
   padding-top: 38px;
-  padding-bottom: 38px;
-  
+  padding-bottom: 38px;  
   
 	background-color: #f1f1f1;
 }
@@ -2185,4 +2190,64 @@ selector{
     opacity: 1;
     transform: scale(100%);
   }
+}
+
+/************ NO-JS *********/
+.map-title{
+	padding: 25px 0 25px 15px;	
+	margin-bottom: 30px;
+	
+	font-size: 30px;
+  line-height: 30px;  
+  text-transform: uppercase;
+	
+	background-color: #f7f3ec;	
+	color: #32425c;	
+}
+.main-map-content figure {
+	margin-bottom: 30px;
+}
+.button-block-no-modal {
+	margin-bottom: 30px;
+	
+	background-color: white;
+}
+
+.addedtocart-content {
+	//text-align: center;	
+}
+.addedtocart-content p {
+	position: relative;	
+	
+	width: 350px;
+	margin: 0 auto;
+	padding: 72px 0 72px 50px;	
+    
+  font-size: 30px;
+  line-height: 18px;
+  text-align: center;
+  color: black;
+}
+
+.addedtocart-content p::before {
+  position: absolute;
+  content: "";  
+  
+  top: 50px;
+  left: -15px;
+  
+  width: 67px;
+  height: 67px;
+  
+  background: url("../img/sprites.png") no-repeat 0 -271px;
+}
+.addedtocart-btn-block {
+	width: 620px;
+	margin: 0 auto;
+	
+	margin-bottom: 40px;
+	padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f1f1f1;
+  text-align: center;
 }
