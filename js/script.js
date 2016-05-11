@@ -1,16 +1,59 @@
-                             /*   Обратная связь          */
+		                       /* Товар добавлен в корзину */
+
+try {
+	var modalAddToCart = document.querySelector(".modal-add-to-cart");          
+	var btnAddToCart = document.querySelectorAll(".products-item .btn-buy");     	
+	var btnCloseWindowCart = modalAddToCart.querySelector(".close-window");
+	var btnContinuePurchase = modalAddToCart.querySelector(".continue-purchase");        
+	/*var btnMakeOrder = modalAddToCart.querySelector(".make-order");*/  
+} catch(e){}
+
+if(modalAddToCart){
+	for(var i=0; i < btnAddToCart.length; i++){
+      btnCurrent = btnAddToCart[i];
+      btnCurrent.addEventListener("click", function(event){
+        event.preventDefault();
+        modalAddToCart.classList.add("show-modal-add-to-cart");
+      });
+    }
     
-    var modalFeedback = document.querySelector(".modal-feedback");                 
-    var btnWriteUs = document.querySelector(".map .btn-write-us");
-    var btnCloseWindowFeedback = modalFeedback.querySelector(".close-window");
-    var userName = modalFeedback.querySelector("[name=user-name]");
-    var eMail = modalFeedback.querySelector("[name=e-mail]");
-    var letterContent = modalFeedback.querySelector("[name=letter-content]");
-		var form = modalFeedback.querySelector("form");
-        
-    var savedUserName = localStorage.getItem("user-name");
-    var savedEMail = localStorage.getItem("e-mail");
-        
+	btnCloseWindowCart.addEventListener("click", function(event){
+      event.preventDefault();
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+  });
+		
+	btnContinuePurchase.addEventListener("click", function(event){         /* при нажатии "продолжить покупки"  */
+      event.preventDefault();																									        			                                                  /* закрываем окно   			       */
+      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
+        modalAddToCart.classList.remove("show-modal-add-to-cart");
+  });
+		
+  window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+        if (event.keyCode === 27) {
+          if (modalAddToCart.classList.contains("show-modal-add-to-cart")) {
+                modalAddToCart.classList.remove("show-modal-add-to-cart");            
+          }
+        }
+  });
+}
+
+                             /*   Обратная связь          */
+try{
+	var modalFeedback = document.querySelector(".modal-feedback");                 
+	var btnWriteUs = document.querySelector(".map .btn-write-us");
+	var btnCloseWindowFeedback = modalFeedback.querySelector(".close-window");
+	var userName = modalFeedback.querySelector("[name=user-name]");
+	var eMail = modalFeedback.querySelector("[name=e-mail]");
+	var letterContent = modalFeedback.querySelector("[name=letter-content]");
+	var form = modalFeedback.querySelector("form");
+
+	var savedUserName = localStorage.getItem("user-name");
+	var savedEMail = localStorage.getItem("e-mail");
+} catch(e) {}
+
+if(modalFeedback){
+
     if(savedUserName){
       userName.value = savedUserName;          /* если есть сохраненные данные */
     }
@@ -57,65 +100,34 @@
           if(modalFeedback.classList.contains("modal-error"))
             modalFeedback.classList.remove("modal-error");                      
         }
-    });
-    							          /* Карта */
+  });
+} /*end modalFeedback*/
+						
+										/* Карта */
     
-    var modalMap = document.querySelector(".modal-map");							 
-    var btnShowMap = document.querySelector(".map .show-map");
-    var btnCloseWindowMap = modalMap.querySelector(".close-window");
-    
-    btnShowMap.addEventListener("click", function(event){
+try {
+	var modalMap = document.querySelector(".modal-map");							 
+	var btnShowMap = document.querySelector(".map .show-map");
+	var btnCloseWindowMap = modalMap.querySelector(".close-window");
+} catch(e){}
+
+if(modalMap){
+  btnShowMap.addEventListener("click", function(event){
       event.preventDefault();
       modalMap.classList.add("show-modal-map");
-    });
+  });
     
-    btnCloseWindowMap.addEventListener("click", function(event){
+  btnCloseWindowMap.addEventListener("click", function(event){
       event.preventDefault();
       if(modalMap.classList.contains("show-modal-map"))
         modalMap.classList.remove("show-modal-map");    
-		});
+	});
 		
-    window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
+  window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
       if (event.keyCode === 27) {
         if (modalMap.classList.contains("show-modal-map")) {
           modalMap.classList.remove("show-modal-map");            
         }
       }
-    });
-		
-		                       /* Товар добавлен в корзину */
-    
-  var modalAddToCart = document.querySelector(".modal-add-to-cart");          
-	var btnAddToCart = document.querySelectorAll(".products-item .btn-buy");     	
-	var btnCloseWindowCart = modalAddToCart.querySelector(".close-window");
-	var btnContinuePurchase = modalAddToCart.querySelector(".continue-purchase");        
-	/*var btnMakeOrder = modalAddToCart.querySelector(".make-order");*/  
-    
-	for(var i=0; i < btnAddToCart.length; i++){
-      btnCurrent = btnAddToCart[i];
-      btnCurrent.addEventListener("click", function(event){
-        event.preventDefault();
-        modalAddToCart.classList.add("show-modal-add-to-cart");
-      });
-    }
-    
-    btnCloseWindowCart.addEventListener("click", function(event){
-      event.preventDefault();
-      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
-        modalAddToCart.classList.remove("show-modal-add-to-cart");
-    });
-		
-	btnContinuePurchase.addEventListener("click", function(event){         /* при нажатии "продолжить покупки"  */
-      event.preventDefault();																									        			                                                  /* закрываем окно   			       */
-      if(modalAddToCart.classList.contains("show-modal-add-to-cart"))
-        modalAddToCart.classList.remove("show-modal-add-to-cart");
-    });
-		
-    window.addEventListener("keydown", function(event) {                           /* Выход по ESC */
-        if (event.keyCode === 27) {
-          if (modalAddToCart.classList.contains("show-modal-add-to-cart")) {
-                modalAddToCart.classList.remove("show-modal-add-to-cart");            
-          }
-        }
-      });
-
+  });
+}  /* end modalMap */
