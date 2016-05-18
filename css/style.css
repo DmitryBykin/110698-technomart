@@ -735,32 +735,32 @@ button:focus {
   width: 218px;
   height: 316px;
   
-  border: 1px solid #e5e5e5;  
+  border: 1px solid #e5e5e5; 
 }
 .products-item:nth-of-type(4n){
   margin-right: 0;
 }
 .products-item figure {
   margin-top: 36px;
-  margin-bottom: 54px;    
+  //margin-bottom: 54px;    		
 }
 
 .item-title {
-  position: absolute;
+  position: absolute;  	
   
-  top: 177px;
+	top: 137px;
   bottom: 100px;  
   left: 15px;
   right: 15px;
-  
+	
   font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-  text-align: center;
-  
-  overflow: hidden;     /* названия более 2-х строк обрезаются  */
-  color: black;
+  text-align: center;  
+  overflow-y: auto; /* названия более 2-х строк обрезаются  */
+
+  color: black;	
 }
 .old-price {
   position: absolute;
@@ -987,11 +987,11 @@ button:focus {
 }
 .services-title-description {
   width: 400px;
-  height: 60px;
+  min-height: 60px;
   
   padding-top: 25px;  
   
-  font-family: "PT Sans", Tahona, sans-serif;
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;  
   line-height: 24px;
   
@@ -1025,22 +1025,21 @@ button:focus {
 
 .services-description {    
   float: right;
-  
+	
   width: 626px;
-  height: 287px;   
 }
-.services-block:nth-child(1) {    
-  height: 100%; 
+.services-block:nth-child(1) {
+	min-height: 287px;
   
-  background: url("../img/services-delivery.png") no-repeat right bottom;
+  background: url("../img/services-delivery.png") no-repeat right bottom;		
 }
 .services-block:nth-child(2) {
-  height: 100%;
+  min-height: 287px;
   
   background: url("../img/services-guarantee.png") no-repeat right bottom;
 }
 .services-block:nth-child(3) {
-  height: 100%;
+  min-height: 287px;
   
   background: url("../img/services-credit.png") no-repeat right bottom;
 }
@@ -1202,8 +1201,8 @@ button:focus {
 .footer-top-nav {  
   float: right;	 
   
-  width: 555px;
-  height: 47px;
+  width: 685px;
+  min-height: 47px;	
 }
 .footer-top-nav li {	
   float: right;
@@ -1239,10 +1238,10 @@ button:focus {
 .footer-features-nav {
   float: right;
   
-  width: 530px;
+  width: 600px;
   min-height: 45px;
   
-  margin-top: 27px;
+  margin-top: 27px;	
 }
 .footer-features-nav li {
   float: right;	
@@ -1275,7 +1274,7 @@ button:focus {
   float: left;
   
   width: 245px;
-  height: 65px;
+  min-height: 65px;
   
   padding-top: 35px;
   margin-right: 145px;   
@@ -1288,7 +1287,7 @@ button:focus {
   float: left;
   
   width: 170px;
-  height: 65px;
+  min-height: 65px;
 	
   padding-top: 35px;
   margin-right: 80px;
@@ -1322,7 +1321,7 @@ button:focus {
   float: left;
   
   width: 170px;
-  height: 60px;
+  min-height: 60px;
   
   padding-top: 35px;
 }
@@ -1330,7 +1329,7 @@ button:focus {
   float: right;
   
   width: 112px;
-  height: 60px;
+  min-height: 60px;
   
   padding-top: 35px;
 }
@@ -1342,7 +1341,7 @@ button:focus {
   text-indent: -9999px;
   
   width: 42px;
-  height: 42px;
+  min-height: 42px;
   
   background: url("../img/sprites.png") no-repeat;
 }
